@@ -1,35 +1,46 @@
 header{
-    text-align: center;
+  text-align: center;
 }
 .choice{
-    display: flex;
+  display: flex;
+  justify-content: center;
 }
 .choice ol{
-    flex:auto;
-    padding-inline-start: 0px;
-    text-align: center;
+  width:10%;
+  padding-inline-start: 0px;
+  text-align: center;
+  border:0.6px solid black;
+  border-radius:10px;
+  margin:0 20px;
+  padding:15px 0;
 }
 table{
-    border-collapse: collapse;
-    border-spacing: 0;
-    width:100%;
-  }
-  
-  table tr{
-    border-bottom: solid 1px #eee;
-    cursor: pointer;
-    display: flex;
-  }
-  
-  table tr:hover{
-    background-color: #d4f0fd;
-  }
-  
-  table th,table td{
-    text-align: center;
-    flex: auto;
-    padding-inline-start: 0px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width:100%;
+}
 
-  }
-  
+table tr{
+  border-bottom: solid 1px #eee;
+  cursor: pointer;
+  display: flex;
+  padding:10px 0
+}
 
+table tr:hover{
+  background-color: #d4f0fd;
+}
+
+table th,table td{
+  text-align: center;
+
+  padding-inline-start: 0px;
+
+}
+.event-time,.camera{
+width:20%;
+border-right:1px solid grey;
+}
+.title{
+width:50%;
+}
