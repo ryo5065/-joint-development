@@ -54,24 +54,24 @@
   </header>
   <section class="school" id="school">
     <div class="wrapper-about" id="kk">
-      <div class="school-box"> <a href="#">
+      <div class="school-box"> <a href="{% url 'zoom' pk=1 %}"> {# django表記でurl書き換えました。aタグ機能してる？#}
                 <img id="ku-univ" class="ku img" src="img/ku.jpg"  alt="">
             </a>
         <h4 class="school-text"> 関西大学 </h4>
       </div>
-      <div class="school-box"> <a href="#">
+      <div class="school-box"> <a href="{% url 'zoom' pk=2 %}">
                 <img id="kg-univ" class="kg img" src="img/kg.jpg" alt="">
             </a>
         <h4 class="school-text"> 関西学院大学 </h4>
       </div>
     </div>
     <div class="wrapper-about" id="dr">
-      <div class="school-box"> <a href="#">
+      <div class="school-box"> <a href="{% url 'zoom' pk=3 %}">
     <img id="du-univ" class="du img" src="img/du.jpeg" alt="">
 </a>
         <h4 class="school-text"> 同志社大学 </h4>
       </div>
-      <div class="school-box"> <a href="#">
+      <div class="school-box"> <a href="{% url 'zoom' pk=4 %}">
     <img id="ru-univ"  class="ru img" src="img/ru.png" alt="">
 </a>
         <h4 class="school-text"> 立命館大学 </h4>
