@@ -1,0 +1,35 @@
+header{
+    text-align: center;
+}
+.choice{
+    display: flex;
+}
+.choice ol{
+    flex:auto;
+    padding-inline-start: 0px;
+    text-align: center;
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width:100%;
+  }
+  
+  table tr{
+    border-bottom: solid 1px #eee;
+    cursor: pointer;
+    display: flex;
+  }
+  
+  table tr:hover{
+    background-color: #d4f0fd;
+  }
+  
+  table th,table td{
+    text-align: center;
+    flex: auto;
+    padding-inline-start: 0px;
+
+  }
+  
+
