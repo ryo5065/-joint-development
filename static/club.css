@@ -1,6 +1,11 @@
 body {
   font-family: "Open Sans", sans-serif;
   line-height: 1.25;
+  background-image: url(img/photo0000-0331.jpg);
+}
+
+.ucName {
+  font-size: x-large;
 }
 
 .title_wrapper {
@@ -11,7 +16,7 @@ body {
 .btn1 {
   padding: 0.5em 1em;
   text-decoration: none;
-  background: #668ad8; /*ボタン色*/
+  background: #5a61ce; /*ボタン色*/
   color: #fff;
   border-bottom: solid 4px #627295;
   border-radius: 3px;
