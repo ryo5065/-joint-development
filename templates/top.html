@@ -1,20 +1,19 @@
+{% load static %}
+<meta charset="utf-8">
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
   <title>SecondClass-top</title>
-  <link rel="stylesheet" href="stylesheet.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'stylesheet.css'%}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:700,400">
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="vegas.min.css" />
-  <script script type="text/javascript" src="js/vegas.min.js"></script>
-
-</head>
+  <link rel="stylesheet" type="text/css" href="../static/js/vegas.min.css" />
+  <script script type="text/javascript" src="../static/js/vegas.min.js"></script>
+ </head>
 <body>
   <div id="ham-menu">
     <ul>
@@ -54,25 +53,25 @@
   </header>
   <section class="school" id="school">
     <div class="wrapper-about" id="kk">
-      <div class="school-box"> <a href="{% url 'zoom' pk=1 %}"> {# django表記でurl書き換えました。aタグ機能してる？#}
-                <img id="ku-univ" class="ku img" src="img/ku.jpg"  alt="">
+      <div class="school-box"> <a href="{% url 'zoom' pk=1 %}"> 
+                <img id="ku-univ" class="ku img" src="../static/ku.jpg"   alt="">
             </a>
-        <h4 class="school-text"> 関西大学 </h4>
+        <h4 class="school-text">関西大学</h4>
       </div>
       <div class="school-box"> <a href="{% url 'zoom' pk=2 %}">
-                <img id="kg-univ" class="kg img" src="img/kg.jpg" alt="">
+                <img id="kg-univ" class="kg img" src="../static/kg.jpg"  alt="">
             </a>
         <h4 class="school-text"> 関西学院大学 </h4>
       </div>
     </div>
     <div class="wrapper-about" id="dr">
       <div class="school-box"> <a href="{% url 'zoom' pk=3 %}">
-    <img id="du-univ" class="du img" src="img/du.jpeg" alt="">
+    <img id="du-univ" class="du img" src="../static/du.jpeg"  alt="">
 </a>
         <h4 class="school-text"> 同志社大学 </h4>
       </div>
       <div class="school-box"> <a href="{% url 'zoom' pk=4 %}">
-    <img id="ru-univ"  class="ru img" src="img/ru.png" alt="">
+    <img id="ru-univ"  class="ru img" src="../static//ru.png"  alt="">
 </a>
         <h4 class="school-text"> 立命館大学 </h4>
       </div>
@@ -119,5 +118,5 @@
 <link rel="stylesheet" href="js/vegas.min.css">
 <script type="text/javascript" src="js/vegas.min.js"></script>
 <script src="lib/placeholders.min.js"></script>
-<script type="text/javascript" src="js.js"></script>
+<script type="text/javascript" src="{% static 'js.js'%}"></script>
 </html>
