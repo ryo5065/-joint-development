@@ -84,8 +84,11 @@ li{
 
 
 .header{
-    background-image:url('img/school.jpg');
+    background-image:url( "../static/school.jpg");
+    /* background-image: url('{{ STATIC_URL }}static/media/school.jpg') ; */
     background-size:cover;
+    background-repeat:no-repeat;
+/* background-size:100%; */
 }
 .wrapper-header{
     padding-top: 50px;
@@ -279,7 +282,7 @@ li{
 
 
 .explain{
-    background-image:url('img/friend.jpg');
+    background-image:url( "../static/friend.jpg");
     background-size:cover;
 }
 
