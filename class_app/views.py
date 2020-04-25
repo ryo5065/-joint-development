@@ -13,3 +13,4 @@ def zoom(request,pk):
     return render(request,'zoom_list.html') #ここはエラーが出ないように適当に書いてるだけなので乾くん後はよろしくです
     
 
+
