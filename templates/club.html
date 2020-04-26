@@ -1,24 +1,36 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="{% static 'club.css'%}" />
     <title>大学サークル</title>
   </head>
   <body>
-    <p class="ucName">同志社大学</p>
+    <p class="ucName">{{school.name}}</p>{# djangoで書き換え #}
     <div class="title_wrapper">
-      <a class="btn1">Zoom</a>
+      <a class="btn1"　>Zoom</a>
       <div class="title">サークル団体情報</div>
     </div>
-
-    <form method="get" action="#" class="search_container">
-      <input type="text" size="25" placeholder="　サークルや競技名" />
-      <input type="submit" value="探す" />
+    {% comment %}
+    検索窓はDjango側で作成 queryを利用
+    {% endcomment %}
+    <form action="" method="get" class="search_container">
+      <input name="query" value="{{ request.GET.query }}" type="text" placeholder="分野(exフットサル)">
+      <button type="submit">検索する</button>
     </form>
 
-    <div name="div1" class="table"></div>
+　　 
+    <div name="div1" class="table">
+      {% for list in lists1 %}
+      <h3>{{list.0}}</h3>
+      {% for c in list.1%}
+      <p>{{c.name}}</p>
+      <p>{{c.link}}</p>
+      {% endfor %}
+      {% endfor%}
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="jquery.min.js" type="text/javascript"></script>
