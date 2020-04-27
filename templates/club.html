@@ -10,7 +10,7 @@
   <body>
     <p class="ucName">{{school.name}}</p>{# djangoで書き換え #}
     <div class="title_wrapper">
-      <a class="btn1"　>Zoom</a>
+      <a class="btn1" href="{% url 'zoom' pk=school.id %}">Zoom</a>
       <div class="title">サークル団体情報</div>
     </div>
     {% comment %}
@@ -20,14 +20,19 @@
       <input name="query" value="{{ request.GET.query }}" type="text" placeholder="分野(exフットサル)">
       <button type="submit">検索する</button>
     </form>
+    <p>{{alert1}}</p>
+    {% comment %}
+    検索結果が一致していない時のみ表示。
+    普通のときでも空のpタグができるので、空間があきます。
+    {% endcomment %}
 
 　　 
     <div name="div1" class="table">
       {% for list in lists1 %}
       <h3>{{list.0}}</h3>
-      {% for c in list.1%}
-      <p>{{c.name}}</p>
-      <p>{{c.link}}</p>
+      {% for circle in list.1%}
+      <p>{{circle.name}}</p>
+      <p>{{circle.link}}</p>
       {% endfor %}
       {% endfor%}
     </div>
