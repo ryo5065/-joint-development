@@ -5,35 +5,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'club.css'%}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>大学サークル</title>
   </head>
+  <header></header>
   <body>
-    <p class="ucName">{{school.name}}</p>{# djangoで書き換え #}
+    <p class="ucName">{{school.name}}</p>
+    {# djangoで書き換え #}
     <div class="title_wrapper">
-      <a class="btn1"　>Zoom</a>
+      <a class="btn1" 　>Zoom</a>
       <div class="title">サークル団体情報</div>
     </div>
-    {% comment %}
-    検索窓はDjango側で作成 queryを利用
-    {% endcomment %}
+    {% comment %} 検索窓はDjango側で作成 queryを利用 {% endcomment %}
     <form action="" method="get" class="search_container">
-      <input name="query" value="{{ request.GET.query }}" type="text" placeholder="分野(exフットサル)">
+      <input
+        name="query"
+        value="{{ request.GET.query }}"
+        type="text"
+        placeholder="分野(exフットサル)"
+      />
       <button type="submit">検索する</button>
     </form>
 
-　　 
-    <div name="div1" class="table">
-      {% for list in lists1 %}
+    {% for list in lists1 %}
+    <table name="div1" class="table">
       <h3>{{list.0}}</h3>
       {% for c in list.1%}
-      <p>{{c.name}}</p>
-      <p>{{c.link}}</p>
-      {% endfor %}
-      {% endfor%}
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="jquery.min.js" type="text/javascript"></script>
-    <script src="main.js"></script>
+      <tr>
+        <th>{{c.name}}</th>
+        <td>{{c.link}}</td>
+        {% endfor %} {% endfor%}
+      </tr>
+    </table>
   </body>
 </html>
