@@ -47,10 +47,13 @@ rel="stylesheet"> {% load bootstrap4 %} {% bootstrap_css %}
       <p>{{circle.name}}</p>
       <p>{{circle.tweet_link}}</p>
       <p>{{circle.inst_link}}</p>
-      {% endfor %} {% endfor%}
+      {% endfor %}
+      {% endfor%}
     </div>
     <div class="col-6 offset-3 justify-content-center">
-      {% if is_paginated %} {% include 'pagination.html' %} {% endif %}
+      {% if is_paginated %} 
+      {% include 'pagination.html' %} 
+      {% endif %}
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
