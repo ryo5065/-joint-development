@@ -14,9 +14,7 @@ body {
 *, *::before, *::after {
  box-sizing: border-box;
 }
-ul{
-    cursor:pointer;
-}
+
 li{
     list-style: none;
     position: relative;
@@ -28,10 +26,19 @@ li{
     line-height: 5rem;
     font-size: 2.2rem;
 }
+#ham-menu a{
+    /* margin:10px 40px; */
+    text-decoration: none;
+    color:gray;
+}
+
+#ham-menu a:hover{
+    color:#3e2723;
+
+}
 #ham-menu {
     display:none;
-    color:white;
-    background-color: pink;
+    background-color: rgb(245, 245, 245);
     box-sizing: border-box;
     height: 100%;
     padding: 10px 40px;
@@ -44,9 +51,9 @@ li{
 }
 
 #ham-menu::before {
-    background-color:pink;
+    background-color:rgb(245, 245, 245);
     border-radius: 0 0 0 10px;
-    color: white;
+    color: black;
     content: "≡";
     display: block;
     font-size: 50px; 
@@ -85,10 +92,8 @@ li{
 
 .header{
     background-image:url( "../static/school.jpg");
-    /* background-image: url('{{ STATIC_URL }}static/media/school.jpg') ; */
     background-size:cover;
     background-repeat:no-repeat;
-/* background-size:100%; */
 }
 .wrapper-header{
     padding-top: 50px;
@@ -300,7 +305,7 @@ li{
 }
 
 .explain-text h1{
-    color:blue;
+    color:#263238;
     font-size: 4rem;
 }
 .explain-text h2{
@@ -366,7 +371,6 @@ li{
     }
 
 .explain-text h1{
-    color:blue;
     font-size: 3rem;
     }
 }

@@ -13,7 +13,7 @@ $(function(){
         { src: '../static/duc.jpg' },
         { src:'../static/ruc.jpg'}
         ],
-        delay: 2000,
+        delay: 4000,
         timer: false,
         transition: 'fade',
 

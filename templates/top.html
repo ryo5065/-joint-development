@@ -17,12 +17,12 @@
 <body>
   <div id="ham-menu">
     <ul>
-      <li id="ham-ku">関西大学</li>
-      <li id="ham-kg">関西学院大学</li>
-      <li id="ham-du">同志社大学</li>
-      <li id="ham-ru">立命館大学</li>
-      <li id="ham-site">このサイトについて</li>
-      <li id="ham-what">何ができるの？</li>
+      <li id="ham-ku"><a href="{% url 'zoom' pk=1 %}">関西大学</a></li>
+      <li id="ham-kg"><a href="{% url 'zoom' pk=2 %}">関西学院大学</a></li>
+      <li id="ham-du"><a href="{% url 'zoom' pk=3 %}">同志社大学</a></li>
+      <li id="ham-ru"><a href="{% url 'zoom' pk=4 %}">立命館大学</a></li>
+      <li id="ham-site"><a href="#4">このサイトについて</a></li>
+      <li id="ham-what"><a href="#5">何ができるの？</a></li>
     </ul>
   </div>
   <div id="menu-background"></div>
