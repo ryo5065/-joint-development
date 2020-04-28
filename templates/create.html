@@ -1,0 +1,11 @@
+<form action='' method ="POST">{% csrf_token %}
+  <p>タイトル：<input type='text' name ='title'></p>
+  <p>内容：<textarea type='text' name ='content'></textarea></p>
+  <p>顔出し</p>
+  <label><input type="radio" name="camera" value="OK" />OK</label>
+  <label><input type="radio" name="camera" value="NG" />NG</label>
+  <!-- <p>顔出し：<input type='radio' name ='camera'></p> -->
+  <p>開催日時：<input type='date' name ='date'></p>
+  <p>名前：<input type='text' name ='name'></p>
+  <input type='submit' value='作成する'>
+</form>

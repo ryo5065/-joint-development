@@ -17,3 +17,39 @@ class Circle(models.Model):
     club = models.ForeignKey(Club, on_delete=models.CASCADE)
     def __str__(self):
         return self.name
+
+class FormKuModel(models.Model):
+    title = models.CharField(max_length = 100)
+    name = models.CharField(max_length=100)
+    date = models.DateField()
+    camera = models.BooleanField()
+    content = models.TextField()
+    def __str__(self):
+        return self.title
+
+class FormKgModel(models.Model):
+    title = models.CharField(max_length = 100)
+    name = models.CharField(max_length=100)
+    date = models.DateField()
+    camera = models.BooleanField()
+    content = models.TextField()
+    def __str__(self):
+        return self.title
+
+class FormDuModel(models.Model):
+    title = models.CharField(max_length = 100)
+    name = models.CharField(max_length=100)
+    date = models.DateField()
+    camera = models.BooleanField()
+    content = models.TextField()
+    def __str__(self):
+        return self.title
+
+class FormRuModel(models.Model):
+    title = models.CharField(max_length = 100)
+    name = models.CharField(max_length=100)
+    date = models.DateField()
+    camera = models.BooleanField()
+    content = models.TextField()
+    def __str__(self):
+        return self.title
