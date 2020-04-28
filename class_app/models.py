@@ -21,8 +21,8 @@ class School(models.Model):
 
 class Circle(models.Model):
     name = models.CharField(max_length=50)
-    tweet_link = models.CharField(max_length=200)
-    inst_link = models.CharField(max_length=200)
+    tweet_link = models.CharField(max_length=200,null=True,blank=True)
+    inst_link = models.CharField(max_length=200,null=True,blank=True)
     club = models.ForeignKey(Club, on_delete=models.CASCADE)
     school = models.ForeignKey(School, on_delete=models.CASCADE)
 

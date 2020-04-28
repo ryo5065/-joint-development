@@ -32,14 +32,14 @@ def clubfunc(request, pk):
     q_word2 = request.GET.get("query2")
     if q_word2:
         lists = []
-        lists3 = []
+        lists2 = []
         try:
             clubs = clubs.get(
                 Q(name__icontains=q_word2))
             club_name = clubs.name
             circle = clubs.circle_set.filter(school_id=pk)
-            lists3 += (club_name, circle)
-            lists.append(lists3)
+            lists2 += (club_name, circle)
+            lists.append(lists2)
         except:
             alert = "検索に一致するものがありませんでした。"
     if q_word1 and not q_word2:
@@ -47,11 +47,11 @@ def clubfunc(request, pk):
         lists = []
         alert = ""
         for club in clubs:
-            lists4 = []
+            lists2 = []
             club_name = club.name
             circle = club.circle_set.filter(school_id=pk)
-            lists4 += (club_name, circle)
-            lists.append(lists4)
+            lists2 += (club_name, circle)
+            lists.append(lists2)
        
     paginator = Paginator(lists, 10)  # 1ページに10件表示
     page_num = request.GET.get('page', 1)
