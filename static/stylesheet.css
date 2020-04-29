@@ -220,11 +220,12 @@ li{
 
 .school{
     padding-top: 100px;
+    /* height:1000pxx; */
 }
 
 .img{
-    height: 250px;
-    width: 250px;
+    height: 300px;
+    width: 300px;
     border-radius: 50%;
     background-size: cover;
     border-radius: 50%;
@@ -233,7 +234,6 @@ li{
 
 .ku{
     color:blue;
-    padding: 30px;
     background-color: white;
 }
 
@@ -249,7 +249,6 @@ li{
 .ru{
     
     color:red;
-    padding: 30px;
     background-color: white;
 }
 
@@ -266,6 +265,7 @@ li{
 
 .school-box{
         display: table-cell;
+        padding:70px 0;
 }
 
 .school-text{
@@ -340,13 +340,14 @@ li{
     }
 
     .img{
-        height: 200px;
-        width: 200px;
+        height: 180px;
+        width: 180px;
         border-radius: 50%;
         background-size: cover;
         border-radius: 50%;
         border: 7px solid;
     }
+
 
     .school-text{
         color:black;
@@ -357,7 +358,7 @@ li{
         font-family: 'M PLUS Rounded 1c', sans-serif;
         width: 100%;
         padding: 10px;
-        margin: 10px auto 120px;
+        margin: 10px auto 30px;
         font-size: 3rem;
         letter-spacing: 10px;
         border-radius: 0px;
@@ -365,6 +366,7 @@ li{
 
 .school-box{
     display:block;
+    padding: 0;
     }
 .explain-text{
     font-size: 1.4rem;
