@@ -81,6 +81,10 @@ body {
   color: #3879d9;
 }
 
+.table {
+  margin-top: 10px;
+}
+
 table {
   border-collapse: collapse;
   margin: 0 auto;
@@ -120,7 +124,7 @@ tbody th {
 .price {
   text-align: right;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   table {
     border: 0;
     width: 100%;
