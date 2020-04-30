@@ -36,9 +36,9 @@ class ZoomCreate(CreateView):
     model = FormKuModel
     fields = ('title','date','camera','name','content')
 
-    def get_success_url(self, pk):
-      return reverse_lazy("zoom", kwargs={'pk':self.kwargs['pk']} )
-    # success_url = reverse_lazy('zoom')
+    # def get_success_url(self, pk):
+    #   return reverse_lazy("zoom", kwargs={'pk':self.kwargs['pk']} )
+    success_url = reverse_lazy('create')
 
 
 
