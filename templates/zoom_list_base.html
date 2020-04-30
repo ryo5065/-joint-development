@@ -14,7 +14,7 @@
     <header>
         <div class="container">
 
-            <h1>{% block header %}{% endblock header %}大学</h1>
+            <h1>{{object.school}}</h1>
 
             <ul class="choice">
                 <ol><a>掲示板</a></ol>
@@ -31,7 +31,7 @@
                     <th class="title">タイトル</th>
                     <th> </th>
                     </tr>
-                    {% for item in object_list %}
+                    {% for item in object %}
                     <tr>
                         <td class="event-time">{{item.date}}</td>
                         <td class="camera">{{item.camera}}</td>

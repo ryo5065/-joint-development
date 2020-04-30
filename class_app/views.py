@@ -4,7 +4,7 @@ from django.urls import reverse_lazy
 from .models import School
 from django.db.models import Q
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
-from .models import FormKuModel, FormKgModel, FormDuModel, FormRuModel
+from .models import FormModel
 
 # Create your views here.
 class Top(TemplateView):
@@ -15,25 +15,22 @@ def zoom(request,pk):
     # object_list = FormModel.objects.all()
     # ここでpk指定したい
     if pk == 1:
-        file = 'zoom_list_1.html'
-        object_list = FormKuModel.objects.all()
+        object = FormModel.objects.filter(school__name = '関西大学')
     elif pk == 2:
-        file = 'zoom_list_2.html'
-        object_list = FormKgModel.objects.all()
+        object = FormModel.objects.filter(school__name = '関西学院大学')
     elif pk == 3:
-        file = 'zoom_list_3.html'
-        object_list = FormDuModel.objects.all()
+        object = FormModel.objects.filter(school__name = '同志社大学')
     else:
-        file = 'zoom_list_4.html'
-        object_list = FormRuModel.objects.all()
+        object = FormModel.objects.filter(school__name = '立命館大学')
     
-    return render(request, file, {'object_list':object_list}) 
+    
+    return render(request, 'zoom_list_base.html', {'object':object}) 
 
 # フォーム投稿用
 class ZoomCreate(CreateView):
     template_name = 'create.html'
     # とりあえずエラー回避のため
-    model = FormKuModel
+    model = FormModel
     fields = ('title','date','camera','name','content')
 
     # def get_success_url(self, pk):

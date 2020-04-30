@@ -11,6 +11,7 @@ class Club(models.Model):
     schools = models.ManyToManyField(School,blank=True)
     def __str__(self):
         return self.name
+
 class Circle(models.Model):
     name = models.CharField(max_length=50)
     link = models.CharField(max_length=200)
@@ -18,38 +19,39 @@ class Circle(models.Model):
     def __str__(self):
         return self.name
 
-class FormKuModel(models.Model):
+class FormModel(models.Model):
     title = models.CharField(max_length = 100)
     name = models.CharField(max_length=100)
     date = models.DateField()
     camera = models.BooleanField()
     content = models.TextField()
+    school = models.ForeignKey(School, on_delete=models.SET_NULL, null=True)
     def __str__(self):
         return self.title
 
-class FormKgModel(models.Model):
-    title = models.CharField(max_length = 100)
-    name = models.CharField(max_length=100)
-    date = models.DateField()
-    camera = models.BooleanField()
-    content = models.TextField()
-    def __str__(self):
-        return self.title
+# class FormKgModel(models.Model):
+#     title = models.CharField(max_length = 100)
+#     name = models.CharField(max_length=100)
+#     date = models.DateField()
+#     camera = models.BooleanField()
+#     content = models.TextField()
+#     def __str__(self):
+#         return self.title
 
-class FormDuModel(models.Model):
-    title = models.CharField(max_length = 100)
-    name = models.CharField(max_length=100)
-    date = models.DateField()
-    camera = models.BooleanField()
-    content = models.TextField()
-    def __str__(self):
-        return self.title
+# class FormDuModel(models.Model):
+#     title = models.CharField(max_length = 100)
+#     name = models.CharField(max_length=100)
+#     date = models.DateField()
+#     camera = models.BooleanField()
+#     content = models.TextField()
+#     def __str__(self):
+#         return self.title
 
-class FormRuModel(models.Model):
-    title = models.CharField(max_length = 100)
-    name = models.CharField(max_length=100)
-    date = models.DateField()
-    camera = models.BooleanField()
-    content = models.TextField()
-    def __str__(self):
-        return self.title
+# class FormRuModel(models.Model):
+#     title = models.CharField(max_length = 100)
+#     name = models.CharField(max_length=100)
+#     date = models.DateField()
+#     camera = models.BooleanField()
+#     content = models.TextField()
+#     def __str__(self):
+#         return self.title

@@ -1,10 +1,7 @@
 from django.contrib import admin
-from .models import School,Club,Circle,FormKuModel, FormKgModel, FormDuModel, FormRuModel
+from .models import School,Club,Circle,FormModel
 # Register your models here.
 admin.site.register(School)
 admin.site.register(Club)
 admin.site.register(Circle)
-admin.site.register(FormKuModel)
-admin.site.register(FormKgModel)
-admin.site.register(FormDuModel)
-admin.site.register(FormRuModel)
+admin.site.register(FormModel)
