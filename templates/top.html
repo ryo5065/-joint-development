@@ -1,0 +1,122 @@
+{% load static %}
+<meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <title>SecondClass-top</title>
+  <link rel="stylesheet" href="{% static 'stylesheet.css'%}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:700,400">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../static/js/vegas.min.css" />
+  <script script type="text/javascript" src="../static/js/vegas.min.js"></script>
+</head>
+<body>
+  <div id="ham-menu">
+    <ul>
+      <li id="ham-ku"><a href="{% url 'zoom' pk=1 %}">関西大学</a></li>
+      <li id="ham-kg"><a href="{% url 'zoom' pk=2 %}">関西学院大学</a></li>
+      <li id="ham-du"><a href="{% url 'zoom' pk=3 %}">同志社大学</a></li>
+      <li id="ham-ru"><a href="{% url 'zoom' pk=4 %}">立命館大学</a></li>
+      <li id="ham-site"><a href="#4">このサイトについて</a></li>
+      <li id="ham-what"><a href="#5">何ができるの？</a></li>
+    </ul>
+  </div>
+  <div id="menu-background"></div>
+  <header class="header">
+    <div class="wrapper-header">
+      <div class="title">
+        <p> コロナで失われた<br><span>関関同立新入生</span>の交流を<br> <span>オンライン</span>で</p>
+        <h1 class="site-title">Second Class</h1>
+      </div>
+      <div class="header-text">
+        <a href="#" class="jumpclass" id="1">
+          <h3>教室に入る！</h1>
+        </a>
+      </div>
+      <div class="header-text2">
+        <div class="header-text3">
+          <a href="#" class="jump" id="2">
+            <h3>このサイトについて</h1>
+          </a>
+        </div>
+        <div class="header-text3">
+          <a href="#" class="jump" id="3">
+            <h3>何ができるの？</h1>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="school" id="school">
+    <div class="wrapper-about" id="kk">
+      <div class="school-box"> <a href="{% url 'zoom' pk=1 %}"> 
+                <img id="ku-univ" class="ku img" src="../static/ku.jpg"   alt="">
+            </a>
+        <h4 class="school-text">関西大学</h4>
+      </div>
+      <div class="school-box"> <a href="{% url 'zoom' pk=2 %}">
+                <img id="kg-univ" class="kg img" src="../static/kg.jpg"  alt="">
+            </a>
+        <h4 class="school-text"> 関西学院大学 </h4>
+      </div>
+    </div>
+    <div class="wrapper-about" id="dr">
+      <div class="school-box"> <a href="{% url 'zoom' pk=3 %}">
+    <img id="du-univ" class="du img" src="../static/du.jpeg"  alt="">
+</a>
+        <h4 class="school-text"> 同志社大学 </h4>
+      </div>
+      <div class="school-box"> <a href="{% url 'zoom' pk=4 %}">
+    <img id="ru-univ"  class="ru img" src="../static//ru.png"  alt="">
+</a>
+        <h4 class="school-text"> 立命館大学 </h4>
+      </div>
+    </div>
+  </section>
+  <section class="explain">
+    <div class="explain-text" id="4">
+      <h1>このサイトについて</h1>
+      <h3>地方出身で友達がいない！</h3>
+      <h3>学校みたいに新入生が交流できる場が欲しい！</h3>
+      <h3>関関同立に入学したけど自粛のせいでヒマや！</h3>
+      <p>コロナウイルスによって自粛が要請されいてる今、</p>
+      <p>新入生同士の交流は非常に困難になっています。</p>
+      <p>関関同立の新入生は今、大学生活に不安だらけでしょう。</p>
+      <p>そんな大学生の不安を少しでも拭いたい</p>
+      <p>オンラインで、第２の教室として、学校と同じように交流して欲しい</h3>
+        <h2>Second Classは、そのような思いから作られました。</h2>
+        <p>このサイトを作っている私たちも大学生です。</p>
+        <p>関関同立の人もいれば、新1回生もいます！</p>
+        <p>新入生の不安を知っているからこそ、</p>
+        <p>少しでも学校と同じように、この場で新入生同士の交流が増えることを願っています。</p>
+    </div>
+    <div class="explain-text" id="5">
+      <h1>何ができるの？</h1>
+      <h3>その1:カメラオフOK！ZOOMを利用した新入生同士の交流ができる！</h3>
+      <p>使い方はとってもカンタン！</p>
+      <p>自分の大学をクリックして、</p>
+      <p>カメラの有無、会話の内容などから気に入った投稿を見つけたら、</p>
+      <p>クリックして交流を始めるだけ！</p>
+      <p>もちろん自分でZOOMからURLを取得して、</p>
+      <p>交流の場を作るのもOK！</p>
+      <h3>その2:お気に入りのサークルを見つけられる！</h3>
+      <p>新歓が中止となり、サークル探しに苦労していませんか？</p>
+      <p>関関同立のサークルは数え切れないほどあります！</p>
+      <p>そこでSecond Classでは、</p>
+      <p>各大学のサークルHPやTwitterアカウントを可能な限り記載しました。</p>
+      <p>是非自分のお気に入りのサークルを見つけてください！</p>
+    </div>
+  </section>
+  <footer class="footer"> </footer>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/vegas.min.js"></script>
+<link rel="stylesheet" href="js/vegas.min.css">
+<script type="text/javascript" src="js/vegas.min.js"></script>
+<script src="lib/placeholders.min.js"></script>
+<script type="text/javascript" src="{% static 'js.js'%}"></script>
+</html>

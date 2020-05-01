@@ -1,0 +1,175 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+  background-image: url(img/photo0000-0331.jpg);
+}
+
+.ucName {
+  font-size: x-large;
+}
+
+.title_wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn1 {
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #5a61ce; /*ボタン色*/
+  color: #fff;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  user-select: none;
+}
+
+.btn1:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px); /*下に動く*/
+  border-bottom: none; /*線を消す*/
+}
+
+.title {
+  position: relative;
+  padding: 0.25em 0;
+  font-size: x-large;
+}
+
+.title:after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: -moz-linear-gradient(to right, rgb(242, 70, 173), transparent);
+  background: -webkit-linear-gradient(to right, rgb(242, 70, 173), transparent);
+  background: linear-gradient(to right, rgb(242, 70, 173), transparent);
+}
+
+.search_container {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.search_container input[type="text"] {
+  border: none;
+  height: 1.8em;
+}
+.search_container input[type="text"]:focus {
+  outline: 0;
+}
+.search_container {
+  border: 2px solid #3879d9;
+  padding: 3px 5px;
+  border-radius: 20px;
+  height: 2.2em;
+  width: 265px;
+  overflow: hidden;
+}
+.search_container input[type="submit"] {
+  cursor: pointer;
+  font-family: FontAwesome;
+  border: none;
+  background: #3879d9;
+  color: #fff;
+  position: absolute;
+  width: 3.5em;
+  height: 3em;
+  right: 0px;
+  top: -5px;
+  outline: none;
+}
+.search_container ::-webkit-input-placeholder {
+  color: #3879d9;
+}
+
+.table {
+  margin-top: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  color: #000;
+}
+
+table tr {
+  background-color: #fff;
+  padding: 0.35em;
+  border-bottom: 1px solid #bbb;
+}
+table thead {
+  border-bottom: 5px solid #ff9900;
+}
+table tr:last-child {
+  border-bottom: none;
+}
+table th,
+table td {
+  padding: 1em 10px 1em 1em;
+  border-right: 1px solid #bbb;
+}
+table th:last-child,
+table td:last-child {
+  border: none;
+}
+tbody th {
+  color: #ff9901;
+}
+.txt {
+  text-align: left;
+  font-size: 0.85em;
+}
+.price {
+  text-align: right;
+}
+@media screen and (max-width: 768px) {
+  table {
+    border: 0;
+    width: 100%;
+  }
+  table th {
+    display: block;
+    border-right: none;
+    border-bottom: 5px solid #ff9901;
+    padding-bottom: 0.6em;
+    margin-bottom: 0.6em;
+  }
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    display: block;
+    margin-bottom: 2em;
+  }
+
+  table td {
+    border-bottom: 1px solid #bbb;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+    position: relative;
+    padding: 0.625em 0.625em 0.625em 4em;
+    border-right: none;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    position: absolute;
+    left: 10px;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
