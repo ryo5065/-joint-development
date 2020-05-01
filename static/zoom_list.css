@@ -7,7 +7,7 @@ header{
   height:250px;
   color:white;
 }
-
+∫
 .name_u{
 font-size:40px;
 }
@@ -68,5 +68,5 @@ width:50%;
 /*jqueryで現れる掲示板の詳細です*/
 .hide-details{
 margin:0 50px;
-display: none;
+display:none;
 }
