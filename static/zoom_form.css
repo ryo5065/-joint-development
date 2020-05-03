@@ -1,0 +1,24 @@
+@charset "UTF-8";
+html {
+ font-size: 62.5%;
+}
+
+body {
+    font-size:1.4rem;
+    margin:0 auto;
+    text-align: center;
+    background-color: #f6f7fb;
+    color: black;
+    letter-spacing: 2px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+   }
+
+form{
+    display: inline-block;
+    margin:0 auto;
+    text-align: left;
+}
+
+.button{
+    text-align: center;
+}
