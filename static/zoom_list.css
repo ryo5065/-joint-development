@@ -1,19 +1,42 @@
+
+/*ヘッダー部分です*/
 header{
   text-align: center;
+  background-image:url('/Users/kanedaami/Desktop/ruc_zoomlist.jpg') ;
+  background-size:cover;
+  height:250px;
+  color:white;
 }
-.choice{
+∫
+.name_u{
+font-size:40px;
+}
+
+header span{
+color:#800000;
+}
+.name_u,.choice{
   display: flex;
   justify-content: center;
+  line-height: 80px;
 }
 .choice ol{
   width:10%;
   padding-inline-start: 0px;
   text-align: center;
-  border:0.6px solid black;
+  border:3px solid white;
   border-radius:10px;
   margin:0 20px;
   padding:15px 0;
+  background-color:#800000;
+  opacity:0.7;
+
 }
+.choice ol:hover{
+cursor: pointer;
+opacity:1;
+}
+/*掲示板一覧です*/
 table{
   border-collapse: collapse;
   border-spacing: 0;
@@ -22,20 +45,18 @@ table{
 
 table tr{
   border-bottom: solid 1px #eee;
-  cursor: pointer;
   display: flex;
   padding:10px 0
 }
 
-table tr:hover{
-  background-color: #d4f0fd;
+table tr.change-color:hover{
+  background-color: #f3a68c;
+  cursor: pointer;
 }
 
 table th,table td{
   text-align: center;
-
   padding-inline-start: 0px;
-
 }
 .event-time,.camera{
 width:20%;
@@ -43,4 +64,9 @@ border-right:1px solid grey;
 }
 .title{
 width:50%;
+}
+/*jqueryで現れる掲示板の詳細です*/
+.hide-details{
+margin:0 50px;
+display:none;
 }
