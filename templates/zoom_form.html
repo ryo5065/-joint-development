@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'zoom_form.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <form>
+        <p>ZOOMのURL<br>
+        <input type="text" placeholder="ZOOMのURLを貼り付けてください。" size="50"></p>
+        <p>カメラの使用有無<br>
+            <input type="radio" name="q1" value="使用する"> 使用する
+            <input type="radio" name="q1" value="使用しない"> 使用しない
+            <input type="radio" name="q1" value="どちらでも">どちらでも</p>
+            <p>会話の内容<br>
+                <select name="example1">
+                <option value="サークル">サークル</option>
+                <option value="学部">自分の学部について</option>
+                <option value="バイト">バイトについて</option>
+                <option value="友達">友達作り</option>
+                <option value="何でも・雑談">何でも・雑談</option>
+                <option value="その他">その他</option>
+                </select>
+                </p>
+        <p>名前(匿名可)<br>
+        <input type="text" size="50"></p>
+        <p>一言<br>
+        <input type="text" placeholder="(例)法学部の新入生で交流したい！" size="50"></p>
+        <p>交流開始時刻 (30分刻みで入力できます)<br>
+        <input type="time"value="00:00" step="1800" ></p>
+        <div class="button">
+        <a  href=""><input type="submit" value="投稿する" size="50"></a>
+        <!-- aタグで各大学掲示板に飛ばす方法がわからないのでhrefの指定バックエンドの方お願いします。 -->
+        <input type="reset" value="リセット">
+      </div>
+    </form>
+      
+  </body>
+</html>
