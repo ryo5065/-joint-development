@@ -29,7 +29,7 @@
       <input name="query1" value="スポーツ系" type="radio" />スポーツ系
       <input name="query1" value="文化系" type="radio" />文化系
       <input name="query1" value="イベント系" type="radio" />イベント系
-      <button type="submit">検索する</button>
+      <button class="search_btn"type="submit">検索する</button>
     </form>
     <form action="" method="get" class="search_container">
       <input
@@ -37,8 +37,9 @@
         value="{{ request.GET.query2 }}"
         type="text"
         placeholder="分野(exフットサル)"
+        class="text1"
       />
-      <button type="submit">検索する</button>
+      <button class="search_btn"type="submit">検索する</button>
     </form>
     <p>{{alert1}}</p>
     {% comment %} 検索結果が一致していない時のみ表示。
@@ -46,11 +47,13 @@
     {% endcomment %}
     {% for list in page_obj %}
     <table name="div1" class="table">
-      <h1>{{list.0}}</h1>
+      <h3>{{list.0}}</h3>
       {% for circle in list.1%}
       <tr>
-        <th>{{circle.name}}</th>
+        <td class="circle" rowspan="2">{{circle.name}}</td>
         <td>{{circle.tweet_link}}</td>
+      </tr>
+      <tr>
         <td>{{circle.inst_link}}</td>
       </tr>
       {% endfor %} 

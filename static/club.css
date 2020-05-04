@@ -5,7 +5,9 @@ body {
 }
 
 .ucName {
-  font-size: x-large;
+  font-size: xx-large;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .title_wrapper {
@@ -48,6 +50,8 @@ body {
   position: relative;
   box-sizing: border-box;
   margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 .search_container input[type="text"] {
   border: none;
@@ -57,11 +61,11 @@ body {
   outline: 0;
 }
 .search_container {
-  border: 2px solid #3879d9;
+  border: 2px solid #fff;
   padding: 3px 5px;
   border-radius: 20px;
   height: 2.2em;
-  width: 265px;
+  width: 400px;
   overflow: hidden;
 }
 .search_container input[type="submit"] {
@@ -79,21 +83,46 @@ body {
 }
 .search_container ::-webkit-input-placeholder {
   color: #3879d9;
+  text-align: center;
+}
+.search_container >.text1{
+  width: 300px;
 }
 
-.table {
-  margin-top: 10px;
+.search_btn{
+  display: inline-block;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #FFF;
+  background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+  transition: .4s;
+}
+
+.search_btn:hover{
+  background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+}
+
+table.table {
+  margin-top: 0;
+  margin-bottom: 40px;
 }
 
 table {
   border-collapse: collapse;
-  margin: 0 auto;
+  margin: 0 auto 1em;
   padding: 0;
   width: 100%;
   table-layout: fixed;
   color: #000;
+  margin-top: 20px;
 }
-
+h3{
+  margin-bottom: 0em;
+}
+.circle{
+  color: #ff9900;
+  font-size: xx-large;
+}
 table tr {
   background-color: #fff;
   padding: 0.35em;
@@ -109,13 +138,11 @@ table th,
 table td {
   padding: 1em 10px 1em 1em;
   border-right: 1px solid #bbb;
+  text-align: center;
 }
 table th:last-child,
 table td:last-child {
   border: none;
-}
-tbody th {
-  color: #ff9901;
 }
 .txt {
   text-align: left;
@@ -125,11 +152,14 @@ tbody th {
   text-align: right;
 }
 @media screen and (max-width: 768px) {
+  .search_container{
+    width: 100%;
+  }
   table {
     border: 0;
     width: 100%;
   }
-  table th {
+  .cirlcle {
     display: block;
     border-right: none;
     border-bottom: 5px solid #ff9901;
@@ -149,7 +179,6 @@ tbody th {
 
   table tr {
     display: block;
-    margin-bottom: 2em;
   }
 
   table td {
