@@ -4,11 +4,24 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+
     <link rel="stylesheet" href="{% static 'zoom_form.css'%}">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">
   </head>
   <body>
+    <div class="wrapper">
+      <div class="w2">
+
+
+        <ul class="link">
+          <li id="links">関西大学</li>
+          <!-- 大学名仮に関大にしておきました -->
+          <a  href="{%  %}"><li class="links" >サークル</li></a>
+          <a  href="{%  %}"><li class="links" >TOPへ</li></a>
+          <!-- aタグのリンクバックエンドの人お願いします -->
+      </ul>
+
     <form>
         <p>ZOOMのURL<br>
         <input type="text" placeholder="ZOOMのURLを貼り付けてください。" size="50"></p>
@@ -32,12 +45,14 @@
         <input type="text" placeholder="(例)法学部の新入生で交流したい！" size="50"></p>
         <p>交流開始時刻 (30分刻みで入力できます)<br>
         <input type="time"value="00:00" step="1800" ></p>
-        <div class="button">
-        <a  href=""><input type="submit" value="投稿する" size="50"></a>
+        <div class="button" >
+        <a  href=""><input type="submit" style="-webkit-appearance: none;width: 100px;height:40px;  "  value="投稿する" ></a>
         <!-- aタグで各大学掲示板に飛ばす方法がわからないのでhrefの指定バックエンドの方お願いします。 -->
-        <input type="reset" value="リセット">
+        <input type="reset"style="-webkit-appearance: none;width: 100px;height:40px;  " value="リセット">
       </div>
     </form>
-      
+ 
   </body>
+  </div>
+</div> 
 </html>
