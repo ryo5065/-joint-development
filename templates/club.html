@@ -14,10 +14,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'club.css'%}" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <title>大学サークル</title>
   </head>
-  <header></header>
-  <body>
+  <header>
     <p class="ucName">{{school.name}}</p>
     {# djangoで書き換え #}
     <div class="title_wrapper">
@@ -29,7 +29,7 @@
       <input name="query1" value="スポーツ系" type="radio" />スポーツ系
       <input name="query1" value="文化系" type="radio" />文化系
       <input name="query1" value="イベント系" type="radio" />イベント系
-      <button type="submit">検索する</button>
+      <button class="search_btn"type="submit">検索する</button>
     </form>
     <form action="" method="get" class="search_container">
       <input
@@ -37,26 +37,32 @@
         value="{{ request.GET.query2 }}"
         type="text"
         placeholder="分野(exフットサル)"
+        class="text1"
       />
-      <button type="submit">検索する</button>
+      <button class="search_btn"type="submit">検索する</button>
     </form>
     <p>{{alert1}}</p>
     {% comment %} 検索結果が一致していない時のみ表示。
     普通のときでも空のpタグができるので、空間があきます。 
     {% endcomment %}
+  </header>
+  <body>
+  <div class="container">
     {% for list in page_obj %}
     <table name="div1" class="table">
-      <h1>{{list.0}}</h1>
+      <h3>{{list.0}}</h3>
       {% for circle in list.1%}
       <tr>
-        <th>{{circle.name}}</th>
-        <td>{{circle.tweet_link}}</td>
-        <td>{{circle.inst_link}}</td>
+        <td class="circle" rowspan="2">{{circle.name}}</td>
+        <td> <i class="fab fa-twitter  twitter_icon"></i>{{circle.tweet_link}}</td>
+      </tr>
+      <tr>
+        <td><i class="fab fa-instagram instagram_icon"></i>{{circle.inst_link}}</td>
       </tr>
       {% endfor %} 
     </table>
     {% endfor%}
-
+  </div>
     <div class="col-6 offset-3 justify-content-center">
       {% if is_paginated %} {% include 'pagination.html' %} {% endif %}
     </div>
