@@ -13,7 +13,11 @@ class Top(TemplateView):
 
 
 def zoom(request, pk):
+    
     return render(request, 'zoom_list.html')
+
+def postfunc(request,pk):
+    return render(request,'zoom_form.html')
 
 
 def clubfunc(request, pk):
