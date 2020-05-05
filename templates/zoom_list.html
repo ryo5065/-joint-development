@@ -4,17 +4,16 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="{% static 'zoom_list.css'%}">
+        <link rel="stylesheet" href="{% static 'zoom_list.css' %}">
         <title>zoomlist</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
         <header>
             <h1 class="name_u">立<span>命</span>館大学</h1>
             <ul class="choice">
-                <ol><a>掲示板</a></ol>
+                <ol><a>ホームに戻る</a></ol>
                 <ol><a>サークル</a></ol>
-                <ol><a>絞り込み</a></ol>
                 <ol><a>投稿する</a></ol>
             </ul>
         </header>
@@ -23,48 +22,44 @@
                 <tr>
                 <th class="event-time">開催日時</th>
                 <th class="camera">カメラ</th>
+                <th class="title">タイトル</th>
                 </tr>
-                <div  class="zoom-item">
+                <div class="zoom-item">
                     <tr class="change-color">
                         <td class="event-time ">4/30 AM9:00</td>
                         <td class="camera">あり</td>
                         <td class="title">OO学科専攻の学生が気をつけておくべきこと</td>
                         <td><span>+</span></td>
                     </tr>
-                    <div class="hide">
-                        <tr class="hide-details">
-                            <td>初めまして！！jdjdkdkdkどっllあっkskしししsksks阻止sks。よろしくお願いします<br>url:<a href="">http://nssjsjsjk</a></td>
-                        </tr>
-                    </div>
+                    <tr class="hide-details">
+                        <td colspan="4"><h3>投稿者から一言</h3><p>初めまして！！jdjdkdkdkどっllあっkskしししsksks阻止sks。よろしくお願いします</p><br>url:<a href="">http://nssjsjsjk</a></td>
+                    </tr>
                 </div>
                 <div>
                     <tr class="change-color">
-                        <td class="event-time">5/1 PM2:00</td>
-                        <td class="camera">なし</td>
-                        <td class="title">XXX学科の新入生と話したい</td>
+                        <td class="event-time ">4/30 AM9:00</td>
+                        <td class="camera">あり</td>
+                        <td class="title">OO学科専攻の学生が気をつけておくべきこと</td>
                         <td><span>+</span></td>
                     </tr>
-                    <div class="hide">
-                        <tr class="hide-details">
-                            <td>初めまして！！jdjdkdkdkどっllあっkskしししsksks阻止sks。よろしくお願いします<br>url:<a href="">http://nssjsjsjk</a></td>
-                        </tr>
-                    </div>
+                    <tr class="hide-details hidden_row">
+                        <td colspan="4"><h3>投稿者から一言</h3><p>初めまして！！jdjdkdkdkどっllあっkskしししsksks阻止sks。よろしくお願いします<br>url:<a href="">http://nssjsjsjk</a></p></td>
+                    </tr>
                 </div>
-                <div>
+                <div class="zoom-item">
                     <tr class="change-color">
-                        <td class="event-time">5/3 PM9:00</td>
-                        <td class="camera">なし</td>
-                        <td class="title">OOO学部の課題について</td>
+                        <td class="event-time ">4/30 AM9:00</td>
+                        <td class="camera">あり</td>
+                        <td class="title">OO学科専攻の学生が気をつけておくべきこと</td>
                         <td><span>+</span></td>
                     </tr>
-                    <div class="hide">
-                        <tr class="hide-details">
-                            <td>初めまして！！jdjdkdkdkどっllあっkskしししsksks阻止sks。よろしくお願いします<br>url:<a href="">http://nssjsjsjk</a></td>
-                        </tr>
-                    </div>
+                    <tr class="hide-details hidden_row">
+                        <td colspan="4"><h3>投稿者から一言</h3>初めまして！！jdjdkdkdkどっllあっkskしししsksks阻止sks。よろしくお願いします<br>url:<a href="">http://nssjsjsjk</a></td>
+                    </tr>
                 </div>
             </table>
         </div>
-        <script src="static zoomlist.js"></script>
+        <script type= "text/javascript" src="{% static 'zoomlist.js' %}"></script>
     </body>
 </html>
+
