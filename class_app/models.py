@@ -28,3 +28,14 @@ class Circle(models.Model):
 
     def __str__(self):
         return self.name
+
+class Zoom_list(models.Model):
+    title = models.CharField(max_length = 100)
+    name = models.CharField(max_length=100)
+    date = models.CharField(max_length=100)
+    camera = models.CharField(max_length=100)
+    content = models.TextField()
+    url = models.CharField(max_length=100)
+    school = models.ForeignKey(School, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.title

@@ -1,46 +1,47 @@
+{% load static %}
+
 <!doctype html>
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="zoom_list.css">
+        <link rel="stylesheet" href="{% static 'zoom_list.css' %}">
+        <link rel="stylesheet" href="{% static 'responsive-zoom.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>zoomlist</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
-        <header>
-        <h1>OO大学</h1>
+        <header id="school{{school.id}}">
+            <h1 class="name_u">{{school}}</h1>
+            <ul class="choice">
+                <ol><a href="{% url 'top' %}">ホームへ</a></ol>
+                <ol><a href="{% url 'club' pk=school.pk %}">サークル</a></ol>
+                <ol><a href="{% url 'post' pk=school.pk %}">投稿する</a></ol>
+            </ul>
         </header>
-        <ul class="choice">
-            <ol><a>掲示板</a></ol>
-            <ol><a>サークル</a></ol>
-            <ol><a>絞り込み</a></ol>
-            <ol><a>投稿する</a></ol>
-        </ul>
         <div class="list">
             <table>
                 <tr>
                 <th class="event-time">開催日時</th>
                 <th class="camera">カメラ</th>
-                <th class="title">タイトル</th>
-                <th> </th>
+                <th class="title">話題</th>
                 </tr>
-                <tr>
-                    <td class="event-time">4/30 AM9:00</td>
-                    <td class="camera">あり</td>
-                    <td class="title">OO学科専攻の学生が気をつけておくべきこと</td>
-                    <td>+</td>
-                </tr>
-                <tr>
-                    <td class="event-time">5/1 PM2:00</td>
-                    <td class="camera">なし</td>
-                    <td class="title">XXX学科の新入生と話したい</td>
-                    <td>+</td>
-                </tr>
-                <tr>
-                    <td class="event-time">5/3 PM9:00</td>
-                    <td class="camera">なし</td>
-                    <td class="title">OOO学部の課題について</td>
-                    <td>+</td>
-                </tr>
+                <div class="zoom-item">
+                    {% for list in lists %}
+                    <tr class="change-color">
+                        <td class="event-time ">{{list.date}}</td>
+                        <td class="camera">{{list.camera}}</td>
+                        <td class="title">{{list.title}}</td>
+                        <td><span>+</span></td>
+                    </tr>
+                    <tr class="hide-details">
+                        <td colspan="4"><h3>投稿者から一言</h3><p>{{list.content}}</p><br><a class="zoom-link" href="{{list.url}}">{{list.url}}</a></td>
+                    </tr>
+                    {% endfor %}
+                </div>
             </table>
         </div>
+        <script type= "text/javascript" src="{% static 'zoomlist.js' %}"></script>
     </body>
 </html>
+
