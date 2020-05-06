@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic import CreateView, TemplateView, ListView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-from .models import School
+from .models import School,Zoom_list,Club,Circle
 from django.db.models import Q
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
@@ -13,7 +13,27 @@ class Top(TemplateView):
 
 
 def zoom(request, pk):
-    return render(request, 'zoom_list.html')
+    school = School.objects.get(pk=pk)
+    lists = Zoom_list.objects.filter(school_id=pk)
+    print(lists)
+    z = {
+        'school': school,
+        'lists': lists,
+    }
+    return render(request, 'zoom_list.html',z)
+
+def postfunc(request,pk):
+    school = School.objects.get(pk=pk)
+    if request.method == "POST":
+        title = request.POST['title']
+        name = request.POST['name']
+        date = request.POST['date']
+        camera = request.POST['camera']
+        content = request.POST['content']
+        url = request.POST['url']
+        Zoom_list.objects.create(title=title,name=name,date=date,camera=camera,content=content,url=url,school_id=pk)
+        return redirect('zoom',pk=pk)
+    return render(request,'zoom_form.html',{'school':school})
 
 
 def clubfunc(request, pk):
