@@ -51,15 +51,37 @@ table {
 
 /*ヘッダー部分です*/
   header{
-    text-align: center;
+    padding: 10% 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     background-image:url('../static/ruc_zoomlist.jpg') ;
     background-size:cover;
-    height:250px;
+    height:100px;
     color:white;
+}
+
+/* それぞれの大学の背景に変更お願いします */
+/* 関西大学の背景です */
+#school1 {
+    background-image:url('../static/ruc_zoomlist.jpg') ;
+}
+/* 関西学院大学の背景です */
+#school2 {
+    background-image:url('../static/ruc_zoomlist.jpg') ;
+}
+/* 同志社大学の背景です */
+#school3 {
+    background-image:url('../static/ruc_zoomlist.jpg') ;
+}
+/* 立命館大学の背景です */
+#school4 {
+    background-image:url('../static/ruc_zoomlist.jpg') ;
 }
 
 header h1{
  font-size:40px;
+ padding-bottom: 20px;
 }
 
 
@@ -69,18 +91,24 @@ header span{
 .name_u,.choice{
     display: flex;
     justify-content: center;
-    line-height: 80px;
+    line-height: 40px;
+
+}
+a{
+  text-decoration: none;
+  color:white;
 }
 .choice ol{
     width:10%;
     padding-inline-start: 0px;
     text-align: center;
-    border:3px solid white;
+    border:1px solid white;
     border-radius:10px;
     margin:0 20px;
-    padding:5px 0;
+    padding:16px;
     background-color:#800000;
     opacity:0.7;
+    color:white;
 
 }
 .choice ol:hover{
@@ -130,5 +158,21 @@ width:50%;
   border-bottom: 1px solid #eee;
   display:inline-block;
   padding:10px;
-  margin-bottom:20px;
+}
+.hide-details p{
+  margin:20px;
+}
+/*zoomに飛ぶボタンです*/
+.zoom-link{
+  text-decoration: none;
+  padding:10px;
+  border-radius: 5px;
+  color: white;
+  background-color: #0e71eb;
+  transition: 0.5s;
+}
+.zoom-link:active{
+  color:#0e71eb;
+  background-color: white;
+  border: 0.5px solid #0e71eb;
 }
