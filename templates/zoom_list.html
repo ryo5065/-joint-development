@@ -22,7 +22,7 @@
                 <tr>
                 <th class="event-time">開催日時</th>
                 <th class="camera">カメラ</th>
-                <th class="title">タイトル</th>
+                <th class="title">話題</th>
                 </tr>
                 <div class="zoom-item">
                     {% for list in lists %}
@@ -33,7 +33,7 @@
                         <td><span>+</span></td>
                     </tr>
                     <tr class="hide-details">
-                        <td colspan="4"><h3>投稿者から一言</h3><p>{{list.content}}</p><br>url:<a href="{{list.url}}">{{list.url}}</a></td>
+                        <td colspan="4"><h3>投稿者から一言</h3><p>{{list.content}}</p><br><a class="zoom-link" href="{{list.url}}">{{list.url}}</a></td>
                     </tr>
                     {% endfor %}
                 </div>
