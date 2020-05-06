@@ -29,6 +29,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -126,13 +127,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# STATICFILES_DIRS = [BASE_DIR,'static']
+STATICFILES_DIRS = [BASE_DIR,'static']
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
-
-MEDIA_URL = '/medi/'
+# MEDIA_URL = '/medi/'
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
