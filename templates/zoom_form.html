@@ -15,22 +15,20 @@
 
 
         <ul class="link">
-          <li id="links">関西大学</li>
-          <!-- 大学名仮に関大にしておきました -->
-          <a  href="{%  %}"><li class="links" >サークル</li></a>
-          <a  href="{%  %}"><li class="links" >TOPへ</li></a>
-          <!-- aタグのリンクバックエンドの人お願いします -->
+          <li id="links">{{school}}</li>
+          <a  href="{% url 'club' pk=school.pk %}"><li class="links" >サークル</li></a>
+          <a  href="{% url 'top' %}"><li class="links" >TOPへ</li></a>
       </ul>
 
-    <form>
+    <form action="" method="POST">{% csrf_token %}
         <p>ZOOMのURL<br>
-        <input type="text" placeholder="ZOOMのURLを貼り付けてください。" size="50"></p>
+        <input type="text" placeholder="ZOOMのURLを貼り付けてください。" size="50" name="url" required></p>
         <p>カメラの使用有無<br>
-            <input type="radio" name="q1" value="使用する"> 使用する
-            <input type="radio" name="q1" value="使用しない"> 使用しない
-            <input type="radio" name="q1" value="どちらでも">どちらでも</p>
+            <input name="camera" value="使用する" type="radio" required/>使用する
+            <input name="camera" value="使用しない" type="radio"/>使用しない
+            <input name="camera" value="どちらでも" type="radio"/>どちらでも</p>
             <p>会話の内容<br>
-                <select name="example1">
+                <select name="title" required>{# 前はname="example1" #}
                 <option value="サークル">サークル</option>
                 <option value="学部">自分の学部について</option>
                 <option value="バイト">バイトについて</option>
@@ -40,15 +38,15 @@
                 </select>
                 </p>
         <p>名前(匿名可)<br>
-        <input type="text" size="50"></p>
+        <input type="text" size="50" name="name" required></p>
         <p>一言<br>
-        <input type="text" placeholder="(例)法学部の新入生で交流したい！" size="50"></p>
+        <input type="text" placeholder="(例)法学部の新入生で交流したい！" size="50" name="content" required></p>
         <p>交流開始時刻 (30分刻みで入力できます)<br>
-        <input type="time"value="00:00" step="1800" ></p>
+        <input type="time"value="00:00" step="1800" name="date" required></p>
         <div class="button" >
-        <a  href=""><input type="submit" style="-webkit-appearance: none;width: 100px;height:40px;  "  value="投稿する" ></a>
-        <!-- aタグで各大学掲示板に飛ばす方法がわからないのでhrefの指定バックエンドの方お願いします。 -->
-        <input type="reset"style="-webkit-appearance: none;width: 100px;height:40px;  " value="リセット">
+        <input type="submit" style="-webkit-appearance: none;width: 100px;height:40px;" value="投稿する">
+        <a href="{% url 'post' pk=school.pk %}">リセット</a>
+        {# <input type="reset"style="-webkit-appearance: none;width: 100px;height:40px;  " value="リセット"> #}
       </div>
     </form>
  
