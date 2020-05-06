@@ -51,15 +51,19 @@ table {
 
 /*ヘッダー部分です*/
   header{
-    text-align: center;
+    padding: 10% 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     background-image:url('../static/ruc_zoomlist.jpg') ;
     background-size:cover;
-    height:250px;
+    height:100px;
     color:white;
 }
 
 header h1{
  font-size:40px;
+ padding-bottom: 20px;
 }
 
 
@@ -69,19 +73,23 @@ header span{
 .name_u,.choice{
     display: flex;
     justify-content: center;
-    line-height: 80px;
+    line-height: 40px;
+
+}
+a{
+  text-decoration: none;
+  color:white;
 }
 .choice ol{
     width:10%;
     padding-inline-start: 0px;
     text-align: center;
-    border:3px solid white;
+    border:1px solid white;
     border-radius:10px;
     margin:0 20px;
-    padding:5px 0;
+    padding:16px;
     background-color:#800000;
     opacity:0.7;
-    text-decoration: none;
     color:white;
 
 }
