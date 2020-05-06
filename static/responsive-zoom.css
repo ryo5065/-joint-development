@@ -1,25 +1,19 @@
 @media screen and (max-width:670px) {
 header{
-    height:40px;
-}
-table{
-    margin-top: 50px;
+    padding:10% 0 0 0;
 }
 .name_u{
     margin-top: 5px;
     }
-.choice{
 
-    margin:10px 0;
-
-    }
     .choice ol{
       width:50%;
-      padding-inline-start: 0px;
       margin:0 auto;
       border-right:0.2px solid white;
       border-radius: 0px;
       opacity: 1;
+      line-height: 10px;
+      
       
     }
     th{

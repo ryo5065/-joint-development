@@ -1,6 +1,6 @@
 @charset "UTF-8";
 html {
- font-size: 62.5%;
+ font-size: 70%;
  
 }
 
@@ -28,16 +28,21 @@ a{
     color:white;
 }
 .link{
+  /* width:100%; */
     display: flex;
     justify-content: center;
     line-height: 14px;
+  
   }
 
-
+.sukima{
+  padding:0 40px;
+}
  #links{
+   position:fixed;
+   top:0;
+   left:0%;
      font-size:3.5rem;
-    position: relative;
-    top:14px;
     margin:0 40px;
     list-style: none;
  } 
@@ -48,7 +53,6 @@ a{
     text-align: center;
     border:3px solid white;
     border-radius:10px;
-    margin:0 40px;
     padding:10px 10px;
     background-color:lightgreen;
   }
@@ -59,7 +63,7 @@ a{
   }
 
 .w2{
-    padding-top:10px;
+    padding-top:50px;
     background:rgba(255,
     255,
     255,
@@ -69,28 +73,48 @@ a{
 form{
   
     display: inline-block;
-    margin:0 auto 120px;
+    margin:0 auto 22px;
     text-align: left;
 }
 
 .button{
     text-align: center;
-    
 }
 
+#btns{
+  font-size:1.4rem;
+  margin:0 20px;
+  border-radius : 5%;
+  cursor        : pointer;
+  padding       : 12px 12px;
+  background    : #6666ff;
+  color         :white;
+  transition    : .3s;
+  box-shadow    : 5px 5px 3px #666666;
+  border        : 2px solid #6666ff;
+}
+
+#btns:hover {
+  box-shadow    : none;
+  color         : #6666ff;
+  background    : white;
+}
 
 
 @media(max-width: 768px){
 
 
 html {
-        font-size: 45%;
+        font-size: 50%;
+       
         
        }
 body{
    overflow-x: hidden;
 }
-
+section{
+  padding-bottom:4px;
+}
 #links{
     display:none;
     justify-content: center;
@@ -100,6 +124,7 @@ body{
     display: flex;
     justify-content: center;
     line-height: 14px;
+    padding-bottom: 20px;
   }
   .links{
     position:relative;
@@ -110,8 +135,27 @@ body{
     text-align: center;
     border:3px solid white;
     border-radius:10px;
-    margin:0 20px;
     padding:10px 10px;
     background-color:lightgreen;
+  }
+  .sukima{
+    padding:0 10px;
+  }
+.button{
+  padding:30px 0;
+}
+
+}
+@media(max-width: 375px){
+  section{
+    padding-bottom:15px;
+  }
+}
+@media(max-width: 320px){
+  html {
+    font-size: 30%;
+   }
+   .links{
+    width:50px;
   }
 }
