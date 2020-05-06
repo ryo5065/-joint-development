@@ -1,10 +1,12 @@
-
 {% load static %}
+
 <!doctype html>
 <html>
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="{% static 'zoom_list.css' %}">
+        <link rel="stylesheet" href="{% static 'responsive-zoom.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>zoomlist</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
@@ -12,7 +14,7 @@
         <header id="school{{school.id}}">
             <h1 class="name_u">{{school}}</h1>
             <ul class="choice">
-                <ol><a href="{% url 'top' %}">ホームに戻る</a></ol>
+                <ol><a href="{% url 'top' %}">ホームへ</a></ol>
                 <ol><a href="{% url 'club' pk=school.pk %}">サークル</a></ol>
                 <ol><a href="{% url 'post' pk=school.pk %}">投稿する</a></ol>
             </ul>
@@ -33,7 +35,7 @@
                         <td><span>+</span></td>
                     </tr>
                     <tr class="hide-details">
-                        <td colspan="4"><h3>投稿者から一言</h3><p>{{list.content}}</p><br>url : <a href="{{list.url}}">{{list.url}}</a></td>
+                        <td colspan="4"><h3>投稿者から一言</h3><p>{{list.content}}</p><br><a class="zoom-link" href="{{list.url}}">{{list.url}}</a></td>
                     </tr>
                     {% endfor %}
                 </div>
