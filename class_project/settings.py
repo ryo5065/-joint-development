@@ -128,14 +128,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [BASE_DIR,'static']
 # STATICFILES_DIRS = [BASE_DIR,'static']
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 MEDIA_URL = '/medi/'
-
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
@@ -148,4 +148,4 @@ except ImportError:
 # Debug=Falseの時だけ実行する設定
 if not DEBUG:
     import django_heroku
-    django_heroku.settings(locals())
+    django_heroku.settings(locals()) 
