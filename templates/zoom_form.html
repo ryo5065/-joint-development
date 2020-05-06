@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper" id="{{school.id}}">
       <div class="w2">
 
 
@@ -27,9 +27,9 @@
             <input name="camera" value="使用する" type="radio" required/>使用する
             <input name="camera" value="使用しない" type="radio"/>使用しない
             <input name="camera" value="どちらでも" type="radio"/>どちらでも</p>
-            <p>会話の内容<br>
-                <select name="title" required>{# 前はname="example1" #}
-                <option value="サークル">サークル</option>
+            <p>話題<br>
+                <select name="title" required>
+                <option value="サークル">サークルについて</option>
                 <option value="学部">自分の学部について</option>
                 <option value="バイト">バイトについて</option>
                 <option value="友達">友達作り</option>
@@ -42,11 +42,10 @@
         <p>一言<br>
         <input type="text" placeholder="(例)法学部の新入生で交流したい！" size="50" name="content" required></p>
         <p>交流開始時刻 (30分刻みで入力できます)<br>
-        <input type="time"value="00:00" step="1800" name="date" required></p>
+        <input type="time"value="12:00" step="1800" name="date" required></p>
         <div class="button" >
         <input type="submit" style="-webkit-appearance: none;width: 100px;height:40px;" value="投稿する">
         <a href="{% url 'post' pk=school.pk %}">リセット</a>
-        {# <input type="reset"style="-webkit-appearance: none;width: 100px;height:40px;  " value="リセット"> #}
       </div>
     </form>
  

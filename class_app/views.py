@@ -14,8 +14,8 @@ class Top(TemplateView):
 
 def zoom(request, pk):
     school = School.objects.get(pk=pk)
-    lists = Zoom_list.objects.filter(school_id=pk)
-    print(lists)
+    #最新投稿を降順で表示
+    lists = Zoom_list.objects.filter(school_id=pk).order_by('id').reverse()
     z = {
         'school': school,
         'lists': lists,
