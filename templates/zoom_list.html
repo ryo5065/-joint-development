@@ -9,8 +9,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
-        <header>
-            <h1 class="name_u">{{school}}</h1>{#　立<span>命</span>館大学  #}
+        <header id="school{{school.id}}">
+            <h1 class="name_u">{{school}}</h1>
             <ul class="choice">
                 <ol><a href="{% url 'top' %}">ホームに戻る</a></ol>
                 <ol><a href="{% url 'club' pk=school.pk %}">サークル</a></ol>
@@ -22,7 +22,7 @@
                 <tr>
                 <th class="event-time">開催日時</th>
                 <th class="camera">カメラ</th>
-                <th class="title">タイトル</th>
+                <th class="title">話題</th>
                 </tr>
                 <div class="zoom-item">
                     {% for list in lists %}
@@ -33,7 +33,7 @@
                         <td><span>+</span></td>
                     </tr>
                     <tr class="hide-details">
-                        <td colspan="4"><h3>投稿者から一言</h3><p>{{list.content}}</p><br>url:<a href="{{list.url}}">{{list.url}}</a></td>
+                        <td colspan="4"><h3>投稿者から一言</h3><p>{{list.content}}</p><br>url : <a href="{{list.url}}">{{list.url}}</a></td>
                     </tr>
                     {% endfor %}
                 </div>
