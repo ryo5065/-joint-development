@@ -28,7 +28,6 @@ a{
     color:white;
 }
 .link{
-  /* width:100%; */
     display: flex;
     justify-content: center;
     line-height: 14px;
@@ -39,7 +38,7 @@ a{
   padding:0 40px;
 }
  #links{
-   position:fixed;
+   position: absolute;;
    top:0;
    left:0%;
      font-size:3.5rem;
@@ -63,7 +62,7 @@ a{
   }
 
 .w2{
-    padding-top:50px;
+    padding-top:100px;
     background:rgba(255,
     255,
     255,
@@ -73,7 +72,7 @@ a{
 form{
   
     display: inline-block;
-    margin:0 auto 22px;
+    margin:0 auto 30px;
     text-align: left;
 }
 
@@ -138,6 +137,10 @@ section{
     padding:10px 10px;
     background-color:lightgreen;
   }
+  .w2{
+    padding-top:50px;
+
+}
   .sukima{
     padding:0 10px;
   }
