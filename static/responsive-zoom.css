@@ -2,9 +2,7 @@
 header{
     padding:10% 0 0 0;
 }
-.name_u{
-    margin-top: 5px;
-    }
+
 
     .choice ol{
       width:50%;
@@ -13,13 +11,21 @@ header{
       border-radius: 0px;
       opacity: 1;
       line-height: 10px;
-      
-      
+    }
+      .event-time,.camera{
+        width:30%;
+
+      }
+      .title{
+      width:35%;
+      }
     }
     th{
         font-weight:bold;
+        font-size: 15px;
+        letter-spacing: 3px;
     }
-    th,td{
+td{
         font-size:10px;
     }
-  }
+  
