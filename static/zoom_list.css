@@ -62,15 +62,15 @@ table {
 /* それぞれの大学の背景に変更お願いします */
 /* 関西大学の背景です */
 #school1 {
-    background-image:url('../static/ruc_zoomlist.jpg') ;
+    background-image:url('../static/kuc_zoomlist.jpg') ;
 }
 /* 関西学院大学の背景です */
 #school2 {
-    background-image:url('../static/ruc_zoomlist.jpg') ;
+    background-image:url('../static/kgc_zoomlist.jpg') ;
 }
 /* 同志社大学の背景です */
 #school3 {
-    background-image:url('../static/ruc_zoomlist.jpg') ;
+    background-image:url('../static/duc_zoomlist.jpg') ;
 }
 /* 立命館大学の背景です */
 #school4 {
