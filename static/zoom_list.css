@@ -54,8 +54,6 @@ table {
     padding: 10% 0;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
-    background-image:url('../static/ruc_zoomlist.jpg') ;
     background-size:cover;
     height:100px;
     color:white;
@@ -95,28 +93,58 @@ header span{
 
 }
 a{
-  text-decoration: none;
-  color:white;
+    text-decoration: none;
+    color:white;
 }
 .choice ol{
     width:10%;
     padding-inline-start: 0px;
     text-align: center;
-    border:1px solid white;
+    /* border:1px solid white; */
     border-radius:10px;
     margin:0 20px;
     padding:16px;
-    background-color:#800000;
+    /* background-color:#800000; */
     opacity:0.7;
+    /* color:white; */
+}
+/* 学校ごとにボタンの色を変更 */
+/* 関西大学 */
+.btn1 ol{
+    border:1px solid white;
+    background-color:#800000;
     color:white;
-
 }
+/* 関西学院大学 */
+.btn2 ol{
+    border:1px solid white;
+    background-color:#800000;
+    color:white;
+}
+/* 同志社大学 */
+.btn3 ol{
+    border:1px solid white;
+    background-color:#800000;
+    color:white;
+}
+/* 立命館大学 */
+.btn4 ol{
+    border:1px solid white;
+    background-color:#800000;
+    color:white;
+}
+
 .choice ol:hover{
-  cursor: pointer;
-  opacity:1;
+    cursor: pointer;
+    opacity:1;
 }
-/*掲示板一覧です*/
 
+/* ボタンをブロック要素に変更しました */
+.choice a {
+    display:block;
+}
+
+/*掲示板一覧です*/
 table{
     border-collapse: collapse;
     border-spacing: 0;
