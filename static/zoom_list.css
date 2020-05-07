@@ -51,7 +51,7 @@ table {
 
 /*ヘッダー部分です*/
   header{
-    padding: 10% 0;
+    padding: 7% 0;
     background-repeat: no-repeat;
     background-position: center center;
     background-size:cover;
@@ -105,7 +105,7 @@ a{
     margin:0 20px;
     padding:16px;
     /* background-color:#800000; */
-    opacity:0.7;
+    opacity:0.8;
     /* color:white; */
 }
 /* 学校ごとにボタンの色を変更 */
@@ -118,7 +118,7 @@ a{
 /* 関西学院大学 */
 .btn2 ol{
     border:1px solid white;
-    background-color:#1e3c91;
+    background-color:	#FFD700;
     color:white;
 }
 /* 同志社大学 */
