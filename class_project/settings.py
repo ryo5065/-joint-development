@@ -29,6 +29,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -124,11 +125,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+
 STATIC_URL = '/static/'
 
 # STATICFILES_DIRS = [BASE_DIR,'static']
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
@@ -137,12 +139,3 @@ MEDIA_URL = '/medi/'
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
-try:
-    from .local_settings import *
-except ImportError:
-    pass
-
-# Debug=Falseの時だけ実行する設定
-if not DEBUG:
-    import django_heroku
-    django_heroku.settings(locals())

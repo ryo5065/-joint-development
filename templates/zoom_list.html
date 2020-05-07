@@ -13,7 +13,7 @@
     <body>
         <header id="school{{school.id}}">
             <h1 class="name_u">{{school}}</h1>
-            <ul class="choice">
+            <ul class="choice btn{{school.id}}">
                 <ol><a href="{% url 'top' %}">ホームへ</a></ol>
                 <ol><a href="{% url 'club' pk=school.pk %}">サークル</a></ol>
                 <ol><a href="{% url 'post' pk=school.pk %}">投稿する</a></ol>
@@ -36,7 +36,7 @@
                         <td><span>+</span></td>
                     </tr>
                     <tr class="hide-details">
-                        <td colspan="4"><h3>投稿者から一言</h3><p>{{list.content}}</p><br><a class="zoom-link" href="{{list.url}}">{{list.url}}</a></td>
+                        <td colspan="4"><h3>投稿者から一言</h3><p>{{list.content}}</p><br><a class="zoom-link" href="{{list.url}}">参加する</a></td>
                     </tr>
                     {% endfor %}
                 </div>
