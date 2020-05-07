@@ -1,6 +1,6 @@
 body {
   line-height: 1.25;
-  background-image: linear-gradient(to top, rgba(214, 195, 216, 0.774) 0%, rgba(170, 211, 190, 0.7) 100%),url(static/photo0000-0331.jpg);
+  background-image: linear-gradient(to top, rgba(214, 195, 216, 0.774) 0%, rgba(170, 211, 190, 0.7) 100%),url(../static/photo0000-0331.jpg);
 }
 
 .ucName {
