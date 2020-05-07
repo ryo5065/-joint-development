@@ -112,25 +112,25 @@ a{
 /* 関西大学 */
 .btn1 ol{
     border:1px solid white;
-    background-color:#800000;
+    background-color:#0d0c87;
     color:white;
 }
 /* 関西学院大学 */
 .btn2 ol{
     border:1px solid white;
-    background-color:#800000;
+    background-color:#1e3c91;
     color:white;
 }
 /* 同志社大学 */
 .btn3 ol{
     border:1px solid white;
-    background-color:#800000;
+    background-color:#4a0662;
     color:white;
 }
 /* 立命館大学 */
 .btn4 ol{
     border:1px solid white;
-    background-color:#800000;
+    background-color:#9b0001;
     color:white;
 }
 
@@ -156,7 +156,7 @@ table{
   }
   
   table tr.change-color:hover{
-    background-color: #f3a68c;
+    background-color: silver;
     cursor: pointer;
   }
   
