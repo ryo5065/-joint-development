@@ -164,6 +164,7 @@ table{
     text-align: center;
     padding-inline-start: 0px;
     padding:15px;
+    font-size: 15px;
 
   }
 .event-time,.camera,.title{
@@ -182,7 +183,7 @@ width:22%;
 }
 .hide-details h3{
   font-weight: bolder;
-  font-size:25px;
+  font-size:20px;
   border-bottom: 1px solid #eee;
   display:inline-block;
   padding:10px;

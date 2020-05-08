@@ -22,10 +22,8 @@ header{
     }
     th{
         font-weight:bold;
-        font-size: 10px;
         letter-spacing: 1px;
     }
-td{
-        font-size:10px;
+    table th,table td{
+      font-size:10px;
     }
-  
