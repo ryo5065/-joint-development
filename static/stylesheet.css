@@ -27,15 +27,14 @@ li{
     font-size: 2.2rem;
 }
 #ham-menu a{
-    /* margin:10px 40px; */
     text-decoration: none;
     color:gray;
 }
-
+/* 
 #ham-menu a:hover{
     color:#3e2723;
 
-}
+} */
 #ham-menu {
     display:none;
     background-color: rgb(245, 245, 245);
@@ -79,14 +78,14 @@ li{
     z-index: -1;
 }
 
-#ham-menu:hover {
+#ham-menu.is-active{
     transform: translate(-300px);
 }
 
-#ham-menu:hover + #menu-background {
+/* #ham-menu:hover + #menu-background {
     opacity: 0.3;
     z-index: 999;
-}
+} */
 
 
 
