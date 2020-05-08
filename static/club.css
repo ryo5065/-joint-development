@@ -128,6 +128,7 @@ td.circle{
   color: #ff9900;
   font-size: x-large;
   vertical-align: middle;
+  text-align: center;
 }
 table tr {
   background-color: #fff;
@@ -144,7 +145,6 @@ table th,
 table td {
   padding: 1em 10px 1em 1em;
   border-right: 1px solid #bbb;
-  text-align: center;
 }
 table th:last-child,
 table td:last-child {
@@ -159,11 +159,22 @@ table td:last-child {
 }
 
 .twitter_icon{
-  font-size: 1.5em 
+  /* font-size: 1.5em; */
+  color:#55ACEE;
+  padding-right: 2px;
 }
 
 .instagram_icon{
-  font-size: 1.5em 
+  /* font-size: 1.5em; */
+  font-family:'Pacifico', cursive;
+  background-image:radial-gradient(at 20% 120%,orange, #f15a4d 25%, #f13f79 55%, #9933ff 100%);
+  padding:2px 3px;
+  color:#fff;	
+  border-radius:5px;
+}
+
+.none {
+  pointer-events: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -220,3 +231,6 @@ table td:last-child {
     border-bottom: 0;
   }
 }
+
+
+
