@@ -20,23 +20,37 @@ $(function(){
 
     });
 
+    $('#ham-menu').click(function(){
+      $('#ham-menu').addClass('is-active');
+      
+    } );
 
 
-  //   $('#school').bgSwitcher({
-  //     images: [url('../static/kuc.jpg'),url('../static/kgc.jpg'),url('../static/duc.jpg'),url('../static/ruc.jpg')], // 切り替え画像
-  //     Interval: 5000, //切り替えの間隔 1000=1秒
-  //     start: true, //$.fn.bgswitcher(config)をコールした時に切り替えを開始する
-  //     loop: true, //切り替えをループする
-  //     shuffle: false, //背景画像の順番をシャッフルする
-  //     effect: "fade", //エフェクトの種類 "fade" "blind" "clip" "slide" "drop" "hide"
-  //     duration: 1000, //エフェクトの時間 1000=1秒
-  //     easing: "swing", //エフェクトのイージング "swing" "linear"
-  // });
+    $('#ham-menu').click(function(){
+      $('#menu-background').css( 'z-index',999);
+    });
+    $('#ham-menu').click(function(){
+      $('#menu-background').css( 'opacity','0.3');
+    });
 
 
-$('.nav_toggle').on('click', function () {
-    $('.nav_toggle, .nav').toggleClass('show');
-});
+    $('#menu-background').on('click', function(){
+      if( $('#ham-menu').hasClass('is-active')){
+        $('#menu-background').css( 'opacity','0');
+      }
+    });
+  
+    $('#menu-background').on('click', function(){
+      if( $('#ham-menu').hasClass('is-active')){
+        $('#menu-background').css( 'z-index',-999);
+      }
+    });
+    $('#menu-background').on('click', function(){
+      if( $('#ham-menu').hasClass('is-active')){
+        $('#ham-menu').toggleClass('is-active');
+      }
+    });
+
 
     $('#1').click(function(){
         $('html, body').animate({
