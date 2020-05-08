@@ -164,14 +164,15 @@ table{
     text-align: center;
     padding-inline-start: 0px;
     padding:15px;
+    font-size: 15px;
 
   }
-.event-time,.camera{
-  width:25%;
+.event-time,.camera,.title{
+  width:22%;
   border-right:1px solid grey;
 }
-.title{
-width:40%;
+.host-name{
+width:22%;
 }
 /*jqueryで現れる掲示板の詳細です*/
 .hide-details{
@@ -182,7 +183,7 @@ width:40%;
 }
 .hide-details h3{
   font-weight: bolder;
-  font-size:25px;
+  font-size:20px;
   border-bottom: 1px solid #eee;
   display:inline-block;
   padding:10px;

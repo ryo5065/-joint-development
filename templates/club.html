@@ -57,17 +57,33 @@
       {% for circle in list.1%}
       <tr>
         <td class="circle" rowspan="2">{{circle.name}}</td>
-        <td> <i class="fab fa-twitter  twitter_icon"></i>{{circle.tweet_link}}</td>
+        <td><a href="{{circle.tweet_link}}" style="text-decoration: none;" class="a1">
+          <i class="fab fa-twitter  twitter_icon"></i>　<span>{{circle.tweet_link}}</span></a></td> 
       </tr>
       <tr>
-        <td><i class="fab fa-instagram instagram_icon"></i>{{circle.inst_link}}</td>
+        <td><a href="{{circle.inst_link}}" style="text-decoration: none;" class="a1">
+          <i class="fab fa-instagram instagram_icon"></i>　<span>{{circle.inst_link}}</span></a></td>
       </tr>
       {% endfor %} 
     </table>
     {% endfor%}
   </div>
-    <div class="col-6 offset-3 justify-content-center">
-      {% if is_paginated %} {% include 'pagination.html' %} {% endif %}
-    </div>
+  <div class="col-6 offset-3 justify-content-center">
+    {% if is_paginated %} 
+    {% include 'pagination.html' %} 
+    {% endif %}
+  </div>
+  <script>
+    let elements = document.getElementsByClassName('a1');
+    // htmlコレクションを配列に変換
+    elements = Array.from( elements ) ; 
+    elements.forEach(function(element){
+      let attribute = element.getAttribute("href");
+      if (attribute=="None"){
+        element.classList.add("none");
+      };
+    });
+  </script>
+    
   </body>
 </html>
