@@ -166,12 +166,12 @@ table{
     padding:15px;
 
   }
-.event-time,.camera{
-  width:25%;
+.event-time,.camera,.title{
+  width:22%;
   border-right:1px solid grey;
 }
-.title{
-width:40%;
+.host-name{
+width:22%;
 }
 /*jqueryで現れる掲示板の詳細です*/
 .hide-details{
