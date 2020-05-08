@@ -18,14 +18,14 @@ body {
 }
 
 .btn1 {
-  
-  padding: 0.5em 1em;
+  padding: 1em;
   text-decoration: none;
   background: #5a61ce; /*ボタン色*/
   color: #fff;
   border-bottom: solid 4px #627295;
   border-radius: 3px;
   user-select: none;
+  vertical-align: middle;
 }
 
 
@@ -36,14 +36,17 @@ body {
 }
 
 .btn2 {
-  
   padding: 0.5em 1em;
   text-decoration: none;
-  background: #ce5ab1; /*ボタン色*/
-  color: #fff;
+  text-decoration: none;
+  color: #FFF;
+  background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
   border-bottom: solid 4px #627295;
   border-radius: 3px;
   user-select: none;
+  margin: 0 auto;;
+  width: 180px;
+  display: block;
 }
 
 
@@ -62,7 +65,7 @@ body {
 .title {
   position: relative;
   padding: 0.25em 0;
-  font-size: x-large;
+  font-size: xx-large;
 }
 
 .title:after {
@@ -89,6 +92,12 @@ body {
   outline: 0;
 }
 
+.search_container select{
+  border: none;
+  height: 1.8em;
+  width: 14em;
+  padding: 0 auto;
+}
 .search_container {
   /* border: 2px solid #fff; */
   padding: 3px 5px;
@@ -186,6 +195,7 @@ table td:last-child {
 
 .twitter_icon{
   font-size: 1.5em 
+
 }
 
 .instagram_icon{

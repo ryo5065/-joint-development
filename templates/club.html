@@ -21,19 +21,17 @@
     <p class="ucName">{{school.name}}</p>
     {# djangoで書き換え #}
     <div class="title_wrapper">
-      <a class="btn1" href="{% url 'zoom' pk=school.pk %}">Zoom</a>
       <div class="title">サークル団体情報</div>
-        <a class="btn2" href="{% url 'club' pk=school.pk %}">リセット</a>
+      <a class="btn1" href="{% url 'zoom' pk=school.pk %}">戻る</a>
     </div>
     {% comment %} 検索窓はDjango側で作成 queryを利用 {% endcomment %}
     <form action="" method="get" class="search_container">
-    　<select name="query1">
+    　<select name="query1" class="category">
       <option value="スポーツ系">スポーツ系</option>
       <option value="文化系">文化系</option>
       <option value="イベント系">イベント系</option>
       <option value="その他">その他</option>
-    　</select>
-    　<button class="search_btn"type="submit">検索する</button>
+    　</select> <button class="search_btn"type="submit">検索する</button>
     </form>
     
     <form action="" method="get" class="search_container">
@@ -43,9 +41,9 @@
         type="text"
         placeholder="分野(exフットサル)"
         class="text1"
-      />
-      <button class="search_btn"type="submit">検索する</button>
+      /> <button class="search_btn"type="submit">検索する</button>
     </form>
+    <a class="btn2" href="{% url 'club' pk=school.pk %}">検索結果をリセット</a>
     <p class="alert">{{alert1}}</p>
     {% comment %} 検索結果が一致していない時のみ表示。
     普通のときでも空のpタグができるので、空間があきます。 
