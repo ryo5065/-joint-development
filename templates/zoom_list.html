@@ -16,6 +16,7 @@
             <ul class="choice btn{{school.id}}">
                 <ol><a href="{% url 'top' %}">ホームへ</a></ol>
                 <ol><a href="{% url 'club' pk=school.pk %}">サークル</a></ol>
+                <ol><a href="{% url 'explanation' pk=school.pk %}">使い方</a></ol>
                 <ol><a href="{% url 'post' pk=school.pk %}">投稿する</a></ol>
             </ul>
         </header>
