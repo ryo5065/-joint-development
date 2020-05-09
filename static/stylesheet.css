@@ -313,7 +313,7 @@ li{
 
 .explain-text{
     width: 100%;
-    padding: 80px 20px;
+    padding: 80px 20px 40px;
     margin: 0px auto;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 2rem;
@@ -336,15 +336,14 @@ li{
     color:red;
 }
 
+
 .linelogo2{
-    /* background-color: white; */
     font-size:6rem;
     margin:0px 40px;
     
 }
 #twilogo2{
    color:#00aced;
-   /* line-height: 2.5rem; */
    font-size:6rem;
    margin:0 40px;
 }
@@ -356,7 +355,7 @@ li{
 }
 footer{
     padding:10px 0;
-   font-size:15px;
+   font-size:10px;
    letter-spacing: normal;
    }
 
