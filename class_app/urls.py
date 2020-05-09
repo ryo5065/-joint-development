@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path,include
-from .views import Top,zoom,clubfunc,postfunc,Video
+from .views import Top,zoom,clubfunc,postfunc,exfunc
 
 
 urlpatterns = [
@@ -8,5 +8,5 @@ urlpatterns = [
     path('zoom/<int:pk>',zoom,name="zoom"),
     path('zoom_post/<int:pk>',postfunc,name="post"),
     path('club/<int:pk>',clubfunc,name="club"),
-    path('video',Video.as_view(),name="video")
+    path('ex/<int:pk>',exfunc,name="explanation")
 ]

@@ -94,5 +94,6 @@ def clubfunc(request, pk):
     }
     return render(request, "club.html", x)
 
-class Video(TemplateView):
-    template_name = "video.html"
+def exfunc(request,pk):
+    school = School.objects.get(pk=pk)
+    return render(request, "explanation.html",{'school':school})
