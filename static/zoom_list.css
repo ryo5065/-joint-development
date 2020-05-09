@@ -159,12 +159,12 @@ table{
     background-color: silver;
     cursor: pointer;
   }
-  
-  table th,table td{
+
+ th,td{
     text-align: center;
     padding-inline-start: 0px;
     padding:15px;
-    font-size: 15px;
+    font-size:15px;
 
   }
 .event-time,.camera,.title{
