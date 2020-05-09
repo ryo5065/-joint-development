@@ -21,12 +21,15 @@
 
           <div class="sukima">
           <a  href="{% url 'club' pk=school.pk %}"><li class="links" >サークル</li></a>
-        </div>
+        　</div>
+
+         <div class="sukima">
+          <a  href="{% url 'explanation' pk=school.pk %}"><li class="links" >使い方</li></a>
+          </div>
 
           <div class="sukima">
           <a  href="{% url 'zoom' pk=school.pk %}"><li class="links" >戻る</li></a>
           </div>
-         
         </ul>
 
     <form action="" method="POST">{% csrf_token %}

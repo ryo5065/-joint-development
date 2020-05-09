@@ -1,0 +1,65 @@
+img {
+    width:60%;
+    margin-top:10px;
+}
+
+.main {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.text {
+    width:60%;
+    word-wrap: break-word;
+    margin:0 auto;
+    text-align-last: left;
+}
+
+.text > a {
+    text-decoration: none;
+}
+
+/* /* .right {
+    text-align: right;
+    margin-right: 70px;
+} */
+
+h1 {
+    text-align: center;
+    float:left
+} 
+
+header {
+    display: flex;
+    justify-content: center; /* 子要素を中央揃え */
+    position: relative;
+}
+
+.right {
+    position: absolute;
+    right: 30px; /* 右寄せ */
+    top:45px;
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #FFF;
+    background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+    transition: .4s;
+    margin-top: 30px;
+    padding:10px;
+    
+}
+  
+.btn:hover {
+    background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+}
+
+@media (max-width:670px) {
+    img {
+        width:100%;
+        height:400px;
+    }
+}
