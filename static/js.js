@@ -98,7 +98,4 @@ $(function(){
         $(this).attr('src', 'static/ru.png');
       });
 
-
-
-
 }); 

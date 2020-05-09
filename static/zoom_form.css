@@ -12,10 +12,12 @@ body {
 
     color: black;
     letter-spacing: 2px;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+  
    }
 
-
+.w2{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
 select{
 
 font-size:15px;
@@ -105,7 +107,11 @@ form{
   background    : white;
 }
 
-
+footer{
+ padding:10px 0;
+font-size:15px;
+letter-spacing: normal;
+}
 @media(max-width: 768px){
 
 #heito{

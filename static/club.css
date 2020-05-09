@@ -211,7 +211,11 @@ table td:last-child {
 .none {
   pointer-events: none;
 }
-
+footer{
+  padding:10px 0;
+ font-size:15px;
+ letter-spacing: normal;
+ }
 @media screen and (max-width: 768px) {
   .ucName{
     text-align: center;
