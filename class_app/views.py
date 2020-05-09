@@ -73,7 +73,7 @@ def clubfunc(request, pk):
             lists2 += (club_name, circle)
             lists.append(lists2)
        
-    paginator = Paginator(lists, 10)  # 1ページに10件表示
+    paginator = Paginator(lists, 15)  # 1ページに15件表示
     page_num = request.GET.get('page', 1)
     # pages = paginator.page(page_num) これのせいでtry exceptきいてなかった
     try:
