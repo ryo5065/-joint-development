@@ -1,4 +1,4 @@
-@media screen and (max-width:670px) {
+@media (max-width:670px) {
 header{
     padding:10% 0 0 0;
 }
@@ -12,20 +12,18 @@ header{
       opacity: 1;
       line-height: 10px;
     }
-      .event-time,.camera{
-        width:30%;
+      .event-time,.camera,.title{
+        width:22%;
 
       }
-      .title{
-      width:35%;
+      .host-name{
+      width:22%;
       }
-    }
+    
     th{
         font-weight:bold;
-        font-size: 15px;
-        letter-spacing: 3px;
+        letter-spacing: 1px;
     }
-td{
-        font-size:10px;
-    }
-  
+    th,td{
+      font-size:10px;
+    }}
