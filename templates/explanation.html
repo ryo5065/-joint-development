@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'explanation.css'%}">
+    <title>Zoom掲示板使い方</title>
+</head>
+<body>
+    <header>
+        <h1>Zoom掲示板の使い方(PC)</h1>
+        <div class="right">
+            <a href="{% url 'zoom' pk=school.pk %}" class="btn">投稿一覧</a>
+            <a href="{% url 'post' pk=school.pk %}" class="btn">投稿する</a>
+        </div>
+    </header>
+    <div class="main">
+        <div class="text">
+            <p>1.主催者はZoomアカウントが必要です。
+                アカウントをお持ちでない方は、以下のURLからダウンロード画面へ移動しインストールしてください。
+                まず下記の画面のように、ZoomアプリとSecondClassページの両方の画面を開いてください。
+                次に投稿するボタンをクリックしてください。
+                <a href="https://zoom.us/download">Zoomアプリをダウンロード</a>
+            </p>
+        </div>
+        <img src="../static/ex1.png" border="2">
+    </div>
+    <div class="main">
+        <div class="text">
+            <p>2.このページでは主催するイベントに関する情報を入力します。
+                イベントを主催するにはZoomのURLが必要となるため、Zoomアプリのスケジュール機能を利用します。
+                Zoomアプリのスケジュールをクリックしてください
+            </p>
+        </div>
+        <img src="../static/ex2.png" border="2">
+    </div>
+    <div class="main">
+        <div class="text">
+            <p>3.上から順に項目を説明していきます。トピックのところには今回の目的を書いてください。次に日付に関しては開始時刻をしっかりと決めて選択してください。
+                ミーティングIDとパスワードは写真と同じように設定してください。ビデオに関しては、主催者の目的別で自由に設定してください。
+                オーディオは、スマホとパソコンで両方参加できるように、電話とオーディオの欄にチェックを入れてください。
+                カレンダーは、主催者が自身のカレンダーに登録したい場合は左3つのいずれかに、カレンダーに登録する必要がない人は、他のカレンダーにチェックを入れてください。
+                最期に記入内容に問題がなければ、一番下のスケージュールボタンをクリックしてください。
+            </p>
+        </div>
+        <img src="../static/ex3.png" border="2">
+    </div>
+    <div class="main">
+        <div class="text">
+            <p>4.下記の写真のように、「Zoomミーティングに参加する」のURLをコピーして、SecondClassページの「ZoomのURL」に貼り付けてください。
+                (コピー　Mac： command + c, Win：ctrl + c, 貼り付け　Mac：command + v, Win：ctrl + v)
+                残りの項目は、先程Zoomアプリ画面で登録したのと同様に記入してください。
+                最期に投稿するボタンをクリックして、投稿完了です。
+　　　　　　　</p>
+        </div>
+        <img src="../static/ex4.png" border="2">
+    </div>
+    <div class="main">
+        <div class="text">
+            <p>5.投稿が完了すると、一覧画面の一番上に表示されます。
+               主催者は、開始時間になったら,忘れずにZoomアプリの開始ボタンを押してください。
+            </p>
+        </div>
+        <img src="../static/ex5.png" border="2">
+    </div>
+  
+   
+</body>
+</html>

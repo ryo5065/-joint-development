@@ -73,7 +73,7 @@ def clubfunc(request, pk):
             lists2 += (club_name, circle)
             lists.append(lists2)
        
-    paginator = Paginator(lists, 10)  # 1ページに10件表示
+    paginator = Paginator(lists, 15)  # 1ページに15件表示
     page_num = request.GET.get('page', 1)
     # pages = paginator.page(page_num) これのせいでtry exceptきいてなかった
     try:
@@ -93,3 +93,7 @@ def clubfunc(request, pk):
         'is_paginated': pages.has_other_pages,
     }
     return render(request, "club.html", x)
+
+def exfunc(request,pk):
+    school = School.objects.get(pk=pk)
+    return render(request, "explanation.html",{'school':school})
