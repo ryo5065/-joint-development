@@ -16,8 +16,14 @@ body {
    }
 
 
+select{
 
+font-size:15px;
+}
 
+#heito{
+  height:25px;
+}
 .wrapper{
     background-image:url( "../static/school.jpg");
     background-size:100%;
@@ -102,7 +108,9 @@ form{
 
 @media(max-width: 768px){
 
-
+#heito{
+    height:15px;
+  }
 html {
         font-size: 50%;
        
@@ -111,6 +119,10 @@ html {
 body{
    overflow-x: hidden;
 }
+select{
+
+  font-size:11px;
+  }
 section{
   padding-bottom:4px;
 }

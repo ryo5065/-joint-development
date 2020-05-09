@@ -25,7 +25,6 @@
 
           <div class="sukima">
           <a  href="{% url 'zoom' pk=school.pk %}"><li class="links" >戻る</li></a>
-          <!-- 戻るのリンク付けお願いします。 -->
           </div>
          
         </ul>
@@ -33,17 +32,17 @@
     <form action="" method="POST">{% csrf_token %}
       <section>
         <p>ZOOMのURL<br>
-        <input type="text" placeholder="ZOOMのURLを貼り付けてください。" size="50" name="url" required></p>
+        <input type="text" id="heito" placeholder="ZOOMのURLを貼り付けてください。" size="50" name="url" required></p>
       </section>
     <section>
         <p>カメラの使用有無<br>
-            <input name="camera" value="使用する" type="radio" required/>使用する
-            <input name="camera" value="使用しない" type="radio"/>使用しない
-            <input name="camera" value="どちらでも" type="radio"/>どちらでも</p>
+            <input id="heito" name="camera" value="使用する" type="radio" required/>使用する
+            <input id="heito" name="camera" value="使用しない" type="radio"/>使用しない
+            <input id="heito" name="camera" value="どちらでも" type="radio"/>どちらでも</p>
           </section>   
         <section>
             <p>話題<br>
-                <select name="title" required>
+                <select name="title"　 required>
                 <option value="サークル">サークルについて</option>
                 <option value="学部">自分の学部について</option>
                 <option value="バイト">バイトについて</option>
@@ -55,15 +54,15 @@
               </section>
             <section>
                 <p>名前(匿名可)<br>
-        <input type="text" size="50" name="name" required></p>
+        <input id="heito" type="text" size="50" name="name" required></p>
       </section>
     <section>
         <p>一言<br>
-        <input type="text" placeholder="(例)法学部の新入生で交流したい！" size="50" name="content" required></p>
+        <input id="heito" type="text" placeholder="(例)法学部の新入生で交流したい！" size="50" name="content" required></p>
       </section>
         <section>
         <p>交流開始時刻 (30分刻みで入力できます)<br>
-        <input type="time"value="12:00" step="1800" name="date" required></p>
+        <input id="heito" type="time"value="12:00" step="1800" name="date" required></p>
       </section>
         <div class="button" >
         <input id="btns"  class="main_btn" type="submit" style="-webkit-appearance: none;" value="投稿する">
