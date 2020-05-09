@@ -1,4 +1,4 @@
-@media screen and (max-width:670px) {
+@media (max-width:670px) {
 header{
     padding:10% 0 0 0;
 }
@@ -19,11 +19,11 @@ header{
       .host-name{
       width:22%;
       }
-    }
+    
     th{
         font-weight:bold;
         letter-spacing: 1px;
     }
-    table th,table td{
+    th,td{
       font-size:10px;
-    }
+    }}
