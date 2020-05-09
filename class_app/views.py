@@ -93,3 +93,6 @@ def clubfunc(request, pk):
         'is_paginated': pages.has_other_pages,
     }
     return render(request, "club.html", x)
+
+class Video(TemplateView):
+    template_name = "video.html"
