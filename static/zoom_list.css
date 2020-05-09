@@ -204,3 +204,8 @@ width:40%;
   background-color: white;
   border: 0.5px solid #0e71eb;
 }
+footer{
+  padding:10px 0;
+ font-size:15px;
+ letter-spacing: normal;
+ }

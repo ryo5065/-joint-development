@@ -165,7 +165,11 @@ table td:last-child {
 .instagram_icon{
   font-size: 1.5em 
 }
-
+footer{
+  padding:10px 0;
+ font-size:15px;
+ letter-spacing: normal;
+ }
 @media screen and (max-width: 768px) {
   .ucName{
     text-align: center;
