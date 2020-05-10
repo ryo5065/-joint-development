@@ -32,6 +32,7 @@ class Circle(models.Model):
 class Zoom_list(models.Model):
     title = models.CharField(max_length = 100)
     name = models.CharField(max_length=100)
+    datetime = models.CharField(max_length=100)
     date = models.CharField(max_length=100)
     camera = models.CharField(max_length=100)
     content = models.TextField()

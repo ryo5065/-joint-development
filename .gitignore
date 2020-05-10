@@ -1,7 +1,9 @@
 
 *.pyc
 class_app/__pycache__/views.cpython-37.pyc
-# db.sqlite3
+db.sqlite3
 myvenv
 __pycache__
 local_settings.py
+
+

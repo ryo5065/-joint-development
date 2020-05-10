@@ -35,13 +35,13 @@
     <form action="" method="POST">{% csrf_token %}
       <section>
         <p>ZOOMのURL<br>
-        <input type="text" id="heito" placeholder="ZOOMのURLを貼り付けてください。" size="50" name="url" required></p>
+        <input type="text" class="heito" placeholder="ZOOMのURLを貼り付けてください。" size="50" name="url" required></p>
       </section>
     <section>
         <p>カメラの使用有無<br>
-            <input id="heito" name="camera" value="使用する" type="radio" required/>使用する
-            <input id="heito" name="camera" value="使用しない" type="radio"/>使用しない
-            <input id="heito" name="camera" value="どちらでも" type="radio"/>どちらでも</p>
+            <input  name="camera" value="使用する" type="radio" required/>使用する
+            <input  name="camera" value="使用しない" type="radio"/>使用しない
+            <input  name="camera" value="どちらでも" type="radio"/>どちらでも</p>
           </section>   
         <section>
             <p>話題<br>
@@ -57,19 +57,20 @@
               </section>
             <section>
                 <p>名前・団体名 (匿名可)<br>
-        <input id="heito" type="text" size="50" name="name" required></p>
+        <input class="heito" type="text" size="50" name="name" required></p>
       </section>
     <section>
         <p>一言<br>
-        <input id="heito" type="text" placeholder="(例)法学部の新入生で交流したい！" size="50" name="content" required></p>
+        <input class="heito" type="text" placeholder="(例)法学部の新入生で交流したい！" size="50" name="content" required></p>
       </section>
-        <section>
+      <section>
         <p>交流開始時刻 (30分刻みで入力できます)<br>
-        <input id="heito" type="time"value="12:00" step="1800" name="date" required></p>
+          <input type="date" name="datetime" class="heito">
+          <input class="heito" type="time"value="12:00" step="1800" name="date" required></p>
       </section>
         <div class="button" >
-        <input id="btns"  class="main_btn" type="submit" style="-webkit-appearance: none;" value="投稿する">
-        <a id="btns" href="{% url 'post' pk=school.pk %}">リセット</a>
+        <input class="main_btn btns" type="submit" style="-webkit-appearance: none;" value="投稿する">
+        <a class="btns" href="{% url 'post' pk=school.pk %}">リセット</a>
         {# <input type="reset"style="-webkit-appearance: none;width: 100px;height:40px;  " value="リセット"> #}
       </div>
     </form>
@@ -79,4 +80,5 @@
 </div> 
 </body>
 <footer class="footer">Copyright © 2020 SecondClass Inc. All Rights Reserved. </footer>
+<script type="text/javascript" src="{% static 'js.js'%}"></script>
 </html>

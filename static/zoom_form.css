@@ -23,7 +23,7 @@ select{
 font-size:15px;
 }
 
-#heito{
+.heito{
   height:25px;
 }
 .wrapper{
@@ -88,7 +88,7 @@ form{
     text-align: center;
 }
 
-#btns{
+.btns{
   font-size:1.4rem;
   margin:0 20px;
   border-radius : 5%;
@@ -101,7 +101,7 @@ form{
   border        : 2px solid #6666ff;
 }
 
-#btns:hover {
+.btns:hover {
   box-shadow    : none;
   color         : #6666ff;
   background    : white;
@@ -114,9 +114,9 @@ letter-spacing: normal;
 }
 @media(max-width: 768px){
 
-#heito{
+.heito {
     height:15px;
-  }
+}
 html {
         font-size: 50%;
        
