@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="{% static 'zoom_form.css'%}">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">
   </head>
@@ -65,6 +65,7 @@
       </section>
         <section>
         <p>交流開始時刻 (30分刻みで入力できます)<br>
+          <input type="date" name="today" id="heito">
         <input id="heito" type="time"value="12:00" step="1800" name="date" required></p>
       </section>
         <div class="button" >
@@ -79,4 +80,5 @@
 </div> 
 </body>
 <footer class="footer">Copyright © 2020 SecondClass Inc. All Rights Reserved. </footer>
+<script type="text/javascript" src="{% static 'js.js'%}"></script>
 </html>
