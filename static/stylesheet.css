@@ -152,7 +152,7 @@ li{
 }
 .header span{
    font-size: 4rem;
-   color:blue;
+   color:skyblue;
 }
 
 .header h1{
@@ -204,12 +204,12 @@ li{
     display: table;
     width: 230px;
     margin: 0 30px;
-    background-color:pink;
+    background-color:lightgreen;
     color: white;
     border-radius: 20px;
-    border-bottom: 6px solid rgb(248,
-    164,
-    178);
+    border-bottom: 6px solid rgb(94,
+    228,
+    94);
     text-decoration: none;
     letter-spacing: 3px;;
 }
