@@ -43,7 +43,7 @@ a{
   }
 
 .sukima{
-  padding:0 25px;
+  padding:0 40px;
 }
  #links{
    position: absolute;;
@@ -159,9 +159,9 @@ section{
     padding-top:50px;
 
 }
-  .sukima{
+  /* .sukima{
     padding:0 10px;
-  }
+  } */
 .button{
   padding:30px 0;
 }
