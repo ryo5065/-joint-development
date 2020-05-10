@@ -140,12 +140,12 @@ MEDIA_URL = '/medi/'
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
-try:
-    from .local_settings import *
-except ImportError:
-    pass
+# try:
+#     from .local_settings import *
+# except ImportError:
+#     pass
 
-# Debug=Falseの時だけ実行する設定
-if not DEBUG:
-    import django_heroku
-    django_heroku.settings(locals())
+# # Debug=Falseの時だけ実行する設定
+# if not DEBUG:
+#     import django_heroku
+#     django_heroku.settings(locals())
