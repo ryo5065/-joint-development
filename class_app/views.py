@@ -13,7 +13,6 @@ class Top(TemplateView):
 
 
 def zoom(request, pk):
-    template_name = "Zoom_list"
     school = School.objects.get(pk=pk)
     #最新投稿を降順で表示
     lists = Zoom_list.objects.filter(school_id=pk).order_by('id').reverse()
@@ -99,3 +98,15 @@ def clubfunc(request, pk):
 def exfunc(request,pk):
     school = School.objects.get(pk=pk)
     return render(request, "explanation.html",{'school':school})
+
+def spatialfunc(request,pk):
+    school = School.objects.get(pk=pk)
+    #最新投稿を降順で表示
+    z = {
+        'school': school,
+    }
+    return render(request, 'spatial.html',z)
+
+def exspfunc(request,pk,space):
+    room = Zoom_list.objects.filter(school_id=pk).get(title=space)
+    return render(request,'exsp.html',{'room':room})
