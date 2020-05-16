@@ -12,29 +12,29 @@ class Top(TemplateView):
     template_name = "top.html"
 
 
-# def zoom(request, pk):
-#     school = School.objects.get(pk=pk)
-#     #最新投稿を降順で表示
-#     lists = Zoom_list.objects.filter(school_id=pk).order_by('id').reverse()
-#     z = {
-#         'school': school,
-#         'lists': lists,
-#     }
-#     return render(request, 'zoom_list.html',z)
+def zoom(request, pk):
+    school = School.objects.get(pk=pk)
+    #最新投稿を降順で表示
+    lists = Zoom_list.objects.filter(school_id=pk).order_by('id').reverse()
+    z = {
+        'school': school,
+        'lists': lists,
+    }
+    return render(request, 'zoom_list.html',z)
 
-# def postfunc(request,pk):
-#     school = School.objects.get(pk=pk)
-#     if request.method == "POST":
-#         title = request.POST['title']
-#         name = request.POST['name']
-#         date = request.POST['date']
-#         datetime = request.POST['datetime']
-#         camera = request.POST['camera']
-#         content = request.POST['content']
-#         url = request.POST['url']
-#         Zoom_list.objects.create(title=title,name=name,date=date,camera=camera,content=content,url=url,datetime=datetime,school_id=pk)
-#         return redirect('zoom',pk=pk)
-#     return render(request,'zoom_form.html',{'school':school})
+def postfunc(request,pk):
+    school = School.objects.get(pk=pk)
+    if request.method == "POST":
+        title = request.POST['title']
+        name = request.POST['name']
+        date = request.POST['date']
+        datetime = request.POST['datetime']
+        camera = request.POST['camera']
+        content = request.POST['content']
+        url = request.POST['url']
+        Zoom_list.objects.create(title=title,name=name,date=date,camera=camera,content=content,url=url,datetime=datetime,school_id=pk)
+        return redirect('zoom',pk=pk)
+    return render(request,'zoom_form.html',{'school':school})
 
 
 def clubfunc(request, pk):

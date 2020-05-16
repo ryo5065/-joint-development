@@ -1,21 +1,38 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'zoom_list.css' %}">
-    <link rel="stylesheet" href="{% static 'responsive-zoom.css' %}">
-    <title>spatial</title>
-</head>
-<body>
-    <header id="school{{school.id}}">
-        <h1 class="name_u">{{school}}</h1>
-        <ul class="choice btn{{school.id}}">
-            <ol><a href="{% url 'top' %}">ホームへ</a></ol>
-            <ol><a href="{% url 'club' pk=school.pk %}">サークル</a></ol>
-        </ul>
-    </header>
-    
-</body>
+{% load static %}
+
+<!doctype html>
+<html>
+    <head>
+        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PP365N3');</script>
+    <!-- End Google Tag Manager -->
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'spatial.css' %}">
+        <link rel="stylesheet" href="{% static 'responsive-zoom.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>zoomlist</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP365N3"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+        <header id="school{{school.id}}">
+            <div class="line"><a href="https://line.me/R/ti/p/%40050llyzu" class="fab fa-line linelogo"　id="linelogo" style="color:limegreen;"　></a> 
+                <a href="https://twitter.com/SecondClass0" class="fab fa-twitter twilogo" id="twilogo"></a>   新入生の相談・お問い合わせ等はこちらへ！</div>
+            <h1 class="name_u">{{school}}</h1>
+            <div class="choice btn{{school.id}}">
+                <a href="{% url 'top' %}">ホームへ</a>
+                <a href="{% url 'club' pk=school.pk %}">サークル</a>
+              
+            </div>
+        </header>
+    </body>
 </html>
+
+
