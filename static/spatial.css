@@ -1,4 +1,4 @@
-
+/* リセットCSS */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -47,7 +47,11 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/* ここまでリセットCSS */
 
+html {
+    font-size: 62.5%;
+}
 
 /*ヘッダー部分です*/
   header{
@@ -77,7 +81,7 @@ table {
 }
 
 header h1{
-    font-size:55px;
+    font-size:5.5rem;
     text-align: center;
     padding-top: 40px;
 }
@@ -96,13 +100,11 @@ a{
     width:10%;
     padding-inline-start: 0px;
     text-align: center;
-    /* border:1px solid white; */
     border-radius:10px;
     margin:0 20px;
     padding:16px;
-    /* background-color:#800000; */
     opacity:0.8;
-    /* color:white; */
+    font-size: 2rem;
 }
 /* 学校ごとにボタンの色を変更 */
 /* 関西大学 */
@@ -143,7 +145,7 @@ a{
 
 footer{
   padding:10px 0;
- font-size:15px;
+ font-size:1.5rem;
  letter-spacing: normal;
 }
  
@@ -177,4 +179,38 @@ footer{
 }
 #twilogo:hover{
     opacity:0.5;
+}
+
+/* 部屋につながるボタン */
+.btn-circle-fishy {
+    display: inline-block;
+    text-decoration: none;
+    color: #FFF;
+    width: 15rem;
+    height: 15rem;
+    line-height: 15rem;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    background-image: linear-gradient(45deg, #709dff 0%, #91fdb7 100%);
+    transition: .4s;
+    font-size: 1.5rem;
+}
+  
+.btn-circle-fishy:hover {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+
+.spatial {
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.row {
+    margin-top: 7rem;
+}
+
+.left {
+    margin-right: 7rem;
 }
