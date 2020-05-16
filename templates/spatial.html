@@ -12,10 +12,10 @@
     <!-- End Google Tag Manager -->
         <meta charset="UTF-8">
         <link rel="stylesheet" href="{% static 'spatial.css' %}">
-        <link rel="stylesheet" href="{% static 'responsive-zoom.css' %}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>zoomlist</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="{% static 'responsive-zoom.css' %}">
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <title>spatial</title>
     </head>
     <body>
         <!-- Google Tag Manager (noscript) -->
@@ -28,10 +28,19 @@
             <h1 class="name_u">{{school}}</h1>
             <div class="choice btn{{school.id}}">
                 <a href="{% url 'top' %}">ホームへ</a>
-                <a href="{% url 'club' pk=school.pk %}">サークル</a>
-              
+                <a href="{% url 'club' pk=school.pk %}">サークル紹介</a>
             </div>
         </header>
+        <div class="spatial">
+            <div class="cneter">
+                <a href="{% url 'exsp' pk=school.pk　space="circle" %}" class="btn-circle-fishy">サークルの部屋</a>
+            </div>
+            <div class="row">
+                <a href="{% url 'exsp' pk=school.pk　space="faculty" %}" class="btn-circle-fishy left">学部の部屋</a>
+                <a href="{% url 'exsp' pk=school.pk　space="space" %}" class="btn-circle-fishy right">その他の部屋</a>
+            </div>
+            
+        </div>
     </body>
 </html>
 
