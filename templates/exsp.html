@@ -28,6 +28,7 @@
             <div class="choice btn{{school.id}}">
                 <a href="{% url 'top' %}">ホームへ</a>
                 <a href="{% url 'club' pk=school.pk %}">サークル紹介</a>
+                <a href="{% url 'spatial' pk=school.pk %}">戻る</a>
             </div>
         </header>
        
@@ -36,7 +37,9 @@
         とってもフリーな空間で、いつでも自由に出入りできるよ！<br>
         自分の近くにいる相手の声だけが聞こえるから、<br>集団に入り込むのもよし、1人でいる人に声をかけるもよし。<br>
         細かいやり方はともかく、まずは交流場に行ってみよう！</p>
-        <a href="{{room.url}}" class ="btn-sf-like">入り口</a>
+        <div class="btn{{school.id}}">
+            <a href="{{room.url}}" class ="btn-sf-like">入り口</a>
+        </div>
         <footer class="footer fo{{school.id}}">Copyright © 2020 SecondClass Inc. All Rights Reserved. </footer>
     </div>
     
