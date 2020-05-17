@@ -54,36 +54,39 @@ html {
 }
 
 /*ヘッダー部分です*/
-  header{
+body{
     background-repeat: no-repeat;
     background-position: center center;
     background-size:cover;
-    height:300px;
     color:white;
 }
 
 /* それぞれの大学の背景に変更お願いします */
 /* 関西大学の背景です */
 #school1 {
-    background-image:url('../static/kuc_zoomlist.jpg') ;
+    background-image:url('../static/kuc.jpg') ;
 }
 /* 関西学院大学の背景です */
 #school2 {
-    background-image:url('../static/kgc_zoomlist.jpg') ;
+    background-image:url('../static/kgc.jpg') ;
 }
 /* 同志社大学の背景です */
 #school3 {
-    background-image:url('../static/duc_zoomlist.jpg') ;
+    background-image:url('../static/duc.jpg') ;
 }
 /* 立命館大学の背景です */
 #school4 {
-    background-image:url('../static/ruc_zoomlist.jpg') ;
+    background-image:url('../static/ruc.jpg') ;
 }
 
-header h1{
+h1{
     font-size:5.5rem;
     text-align: center;
     padding-top: 40px;
+}
+
+.name_u1,.name_u4 {
+    color:black;
 }
 
 .choice{
@@ -141,13 +144,6 @@ a{
 .choice a {
     display:block;
 }
-
-
-footer{
-  padding:10px 0;
- font-size:1.5rem;
- letter-spacing: normal;
-}
  
 
 .line{
@@ -159,7 +155,11 @@ footer{
    font-size:2rem;
    margin:0;
    list-style: none;
-   }
+}
+
+.li1,.li4 {
+    color:black;
+}
 
 .linelogo{
     text-decoration: none;
@@ -204,7 +204,7 @@ footer{
 
 .spatial {
     text-align: center;
-    margin-top: 6rem;
+    margin-top: 10rem;
 }
 
 .row {
@@ -214,3 +214,15 @@ footer{
 .left {
     margin-right: 7rem;
 }
+
+footer{
+    text-align: center;
+    font-size:1.5rem;
+    margin-top: 6.5rem;
+    letter-spacing: normal;
+}
+
+.fo1,.fo4 {
+    color:black;
+}
+
