@@ -186,17 +186,17 @@ footer{
     }
     
     .choice a{
-       width:7rem;
-       height:7rem;
+       width:7.5rem;
+       height:7.5rem;
        font-size: 1.75rem;
     }
 
     .choice a:first-child{
-        line-height:7rem ;
+        line-height:7.5rem ;
     }
 
     .choice a:last-child{
-        line-height: 7rem;
+        line-height: 7.5rem;
     }
 
     footer {
