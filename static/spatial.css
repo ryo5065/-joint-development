@@ -99,6 +99,7 @@ a{
     text-decoration: none;
     color:white;
 }
+
 .choice a{
     width:10%;
     padding-inline-start: 0px;
@@ -108,7 +109,15 @@ a{
     padding:16px;
     opacity:0.8;
     font-size: 2rem;
+    display:inline-block;
 }
+
+.choice a:hover{
+    cursor: pointer;
+    opacity:1;
+}
+
+
 /* 学校ごとにボタンの色を変更 */
 /* 関西大学 */
 .btn1 a{
@@ -133,18 +142,7 @@ a{
     border:1px solid white;
     background-color:#9b0001;
     color:white;
-}
-
-.choice a:hover{
-    cursor: pointer;
-    opacity:1;
-}
-
-/* ボタンをブロック要素に変更しました */
-.choice a {
-    display:block;
-}
- 
+} 
 
 .line{
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -194,7 +192,7 @@ a{
     overflow: hidden;
     background-image: linear-gradient(45deg, #709dff 0%, #91fdb7 100%);
     transition: .4s;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
   
 .btn-circle-fishy:hover {
@@ -226,3 +224,33 @@ footer{
     color:black;
 }
 
+@media(max-width: 768px){
+    .line{
+        font-size:1.2rem;
+    }
+    
+    .choice a{
+       width:70px;
+       height:70px;
+       font-size: 1.75rem;
+    }
+
+    .choice a:first-child{
+        line-height:70px ;
+    }
+
+    .spatial {
+        margin-top: 6rem;
+    }
+    
+    footer {
+        margin-bottom: 2rem;
+    }
+
+    .row {
+        margin-top: 5rem;
+    }
+    
+    .left {
+        margin-right: 5rem;
+    }
