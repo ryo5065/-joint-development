@@ -17,15 +17,15 @@
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
         <title>spatial</title>
     </head>
-    <body>
+    <body id="school{{school.id}}">
         <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP365N3"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-        <header id="school{{school.id}}">
-            <div class="line"><a href="https://line.me/R/ti/p/%40050llyzu" class="fab fa-line linelogo"　id="linelogo" style="color:limegreen;"　></a> 
+        <header>
+            <div class="line li{{school.id}}"><a href="https://line.me/R/ti/p/%40050llyzu" class="fab fa-line linelogo"　id="linelogo" style="color:limegreen;"　></a> 
                 <a href="https://twitter.com/SecondClass0" class="fab fa-twitter twilogo" id="twilogo"></a>   新入生の相談・お問い合わせ等はこちらへ！</div>
-            <h1 class="name_u">{{school}}</h1>
+            <h1 class="name_u{{school.pk}}">{{school}}</h1>
             <div class="choice btn{{school.id}}">
                 <a href="{% url 'top' %}">ホームへ</a>
                 <a href="{% url 'club' pk=school.pk %}">サークル紹介</a>
@@ -39,8 +39,8 @@
                 <a href="{% url 'exsp' pk=school.pk　space="faculty" %}" class="btn-circle-fishy left">学部の部屋</a>
                 <a href="{% url 'exsp' pk=school.pk　space="space" %}" class="btn-circle-fishy right">その他の部屋</a>
             </div>
-            
         </div>
+        <footer class="footer fo{{school.id}}">Copyright © 2020 SecondClass Inc. All Rights Reserved. </footer>
     </body>
 </html>
 
