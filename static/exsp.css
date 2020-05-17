@@ -180,3 +180,34 @@ footer{
     color:white;
 }
 
+@media(max-width: 768px){
+    .line{
+        font-size:1.2rem;
+    }
+    
+    .choice a{
+       width:70px;
+       height:70px;
+       font-size: 1.75rem;
+    }
+
+    .choice a:first-child{
+        line-height:70px ;
+    }
+
+    footer {
+        margin-bottom: 2rem;
+    }
+
+    p {
+        width:80%;
+    }
+
+    h1 {
+        margin-top: 6rem;
+    }
+
+
+
+
+
