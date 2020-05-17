@@ -109,4 +109,15 @@ def spatialfunc(request,pk):
 
 def exspfunc(request,pk,space):
     room = Zoom_list.objects.filter(school_id=pk).get(title=space)
-    return render(request,'exsp.html',{'room':room})
+    school = School.objects.get(pk=pk)
+    if space== "circle":
+        name = "サークルの部屋"
+
+    elif space == "faculty":
+        name = "学部の部屋"
+
+    else:
+        name = "その他の部屋"
+    
+    objects = {'room':room,'name':name,'school':school}
+    return render(request,'exsp.html',objects)

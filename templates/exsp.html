@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,13 +11,35 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'exsp.css' %}">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <title>room</title>
 </head>
-<body>
+<body id="school{{school.id}}">
      <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP365N3"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <a href="{{room.url}}">入り口</a>
+    <div class="box">
+        <header>
+            <div class="line li{{school.id}}"><a href="https://line.me/R/ti/p/%40050llyzu" class="fab fa-line linelogo"　id="linelogo" style="color:limegreen;"　></a> 
+                <a href="https://twitter.com/SecondClass0" class="fab fa-twitter twilogo" id="twilogo"></a>   新入生の相談・お問い合わせ等はこちらへ！</div>
+                <h1 class="title{{school.id}}">{{name}}</h1>
+            <div class="choice btn{{school.id}}">
+                <a href="{% url 'top' %}">ホームへ</a>
+                <a href="{% url 'club' pk=school.pk %}">サークル紹介</a>
+            </div>
+        </header>
+       
+        <p>ボタンをクリックした先は宇宙のように広がる交流スペー
+        ス！<br>
+        とってもフリーな空間で、いつでも自由に出入りできるよ！<br>
+        自分の近くにいる相手の声だけが聞こえるから、<br>集団に入り込むのもよし、1人でいる人に声をかけるもよし。<br>
+        細かいやり方はともかく、まずは交流場に行ってみよう！</p>
+        <a href="{{room.url}}" class ="btn-sf-like">入り口</a>
+        <footer class="footer fo{{school.id}}">Copyright © 2020 SecondClass Inc. All Rights Reserved. </footer>
+    </div>
+    
+    
 </body>
 </html>
