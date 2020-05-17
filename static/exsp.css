@@ -188,7 +188,7 @@ footer{
     .choice a{
        width:80px;
        height:75px;
-       font-size: 75px;
+       font-size: 15px;
     }
 
     .choice a:first-child{
